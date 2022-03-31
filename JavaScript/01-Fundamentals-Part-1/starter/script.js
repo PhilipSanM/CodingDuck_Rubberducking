@@ -91,7 +91,183 @@
 // console.log(globalVariable);
 // //it works, but isnot a variable that you can use
 
-// =======================================================
-// =========== B A S I C  O P E R A T O R S ==============
-// =======================================================
+// // =======================================================
+// // =========== B A S I C  O P E R A T O R S ==============
+// // =======================================================
+// const now = 2022;
+// const ageMe = now-2003;
+// const ageEli = 2022-1998;
+
+// console.log(ageMe,ageEli);
+// console.log(ageMe+5, ageEli/10, 2**3)
+// //2**3 means 2 to the power of 3, like 2*2*2
+
+// const firstName='Felipe';
+// const lastName='Sanchez';
+// console.log(firstName+" "+ lastName);
+// console.log(firstName+' '+ lastName);
+
+// let x=10+5;
+// x += 10; //means x= x+10
+// x *= 4; //means x= x*4
+// x++;// x=x+1
+// x--;// x= x-1
+// console.log(x);
+
+// // Comparison operators
+// console.log(ageMe>ageEli);// <=,>=, <,>
+// console.log(ageMe>=18);
+
+// const isFullAge = ageMe>=18;
+// console.log(isFullAge);
+
+// //it can also make mathematics operation in orden to obtain the solution like
+// console.log(ageMe+5 <= ageEli-1);
+// //two many variables
+// let w,y;
+// w=y=25-10-5;
+// console.log(w,y);
+
+
+
+// // =======================================================
+// // =========== CODING CHALLENGE #1 =======================
+// // =======================================================
+
+
+//// Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula: BMI = mass / height ** 2 = mass / (height * height). (mass in kg and height in meter).
+
+//// 1. Store Mark's and John's mass and height in variables
+//// 2. Calculate both their BMIs using the formula (you can even implement both versions)
+//// 3. Create a boolean variable 'markHigherBMI' containing information about whether Mark has a higher BMI than John.
+
+//// TEST DATA 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
+//// TEST DATA 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76 m tall.
+
+//// GOOD LUCK 😀
+
+// const markMass = 78, johnMass= 92, markHeigh=1.69, johnHeigh=1.95;
+// const markBmi= markMass/markHeigh**2;
+// const johnBmi= johnMass/johnHeigh**2;
+// const markHigherBMI= markBmi>johnBmi;
+// console.log('MarkBMI is:', markBmi,'John BMI is:', johnBmi,'\nMarkBMI is higher than John?=', markHigherBMI);
+
+// // =======================================================
+// // =========== S T R I N G S  &  T E M P L A T E =========
+// // =======================================================
+
+// const firstName='Felipe';
+// const job= 'student';
+// const birthYear='2003';
+// const year =2022;
+
+// const felipe= "I'm "+ firstName + ', a '+ (year- birthYear )+ ' year old ' + job+ '!' ;
+
+// console.log(felipe);
+
+// //Time to use a template literal, a template string use
+// // this ----> `` to make the template ando use ${}to call the function
+
+// const felipeNew= `I'm ${firstName}, a ${year-birthYear} year old ${job}!`;
+// console.log(felipeNew);
+
+// //Multiple lines with string(
+// console.log('String with \n\
+// multiple \n\
+// lines');
+
+// // You can also use the `` instead of the \n\ for multiple lines
+// console.log(`String with
+// multiple
+// lines`);
+
+// // =======================================================
+// // =========== T A K I N G  D E C I S I O N S  IF/ELSE ===
+// // =======================================================
+
+// const age = 15;
+// const isOldEnough = age>=18;
+// if(isOldEnough){
+// 	console.log("Sarah can start driving license");
+// }else{
+// 	const yearsLeft =18 -age;
+// 	console.log(`Sarah is too young. Wait another ${yearsLeft} years`);
+// }
+
+// const birthYear = 2003;
+// let century;
+// if(birthYear<=2000){
+// 	century=20;
+// }else{
+// 	century=21;
+// }
+
+// console.log(century);
+
+
+// // =======================================================
+// // =========== CODING CHALLENGE #2 =======================
+// // =======================================================
+
+
+// /*
+// Use the BMI example from Challenge #1, and the code you already wrote, and improve it:
+
+// 1. Print a nice output to the console, saying who has the higher BMI. The message can be either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
+// 2. Use a template literal to include the BMI values in the outputs. Example: "Mark's BMI (28.3) is higher than John's (23.9)!"
+
+// HINT: Use an if/else statement 😉
+
+// GOOD LUCK 😀
+// */
+
+// const markMass = 78, johnMass= 92, markHeigh=1.69, johnHeigh=1.95;
+// const markBmi= markMass/markHeigh**2;
+// const johnBmi= johnMass/johnHeigh**2;
+// const markHigherBMI= markBmi>johnBmi;
+// if(markHigherBMI){
+// 	console.log("Mark's BMI is higher than John's BMI\n");
+// 	console.log(`Mark's BMI ${markBmi} is higher than John's ${johnBmi}!`)
+
+// }else{
+// 	console.log("John's BMI is higher than Mark's!\n");
+// 	console.log(`John's BMI ${johnBmi} is higher than Mark's ${markBmi}!`)
+
+// }
+
+
+// // =======================================================
+// // =========== TYPE CONVERSION AND COERCION ==============
+// // =======================================================
+
+//Type conversion is when we manually convert from one type to another.
+//Coercion is when javascript converts that
+
+const inputYear = '2003';
+//this is not going to work because its an string
+console.log(inputYear + 18);
+//we can convert ir
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear)+18);
+
+//make this to see what happend
+console.log(Number('Felix'));
+//NaN means not a number, but thats a number NaN gg
+
+console.log(String(23),23);
+//You can covert to bool, number and string
+
+//type coercion
+console.log('Iam '+18+ ' years old');
+console.log('Iam '+String(18)+ ' years old');
+console.log('23'-'10'-3);
+
+//look
+let n = '1'+1; //11
+n = n-1;
+console.log(n);
+
+n= 2+3+4+'5'//95
+n= '10'-'4'-'3'-2+'5';//15
+console.log(n);
 
