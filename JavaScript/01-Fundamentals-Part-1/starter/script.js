@@ -240,34 +240,67 @@
 // // =========== TYPE CONVERSION AND COERCION ==============
 // // =======================================================
 
-//Type conversion is when we manually convert from one type to another.
-//Coercion is when javascript converts that
+// //Type conversion is when we manually convert from one type to another.
+// //Coercion is when javascript converts that
 
-const inputYear = '2003';
-//this is not going to work because its an string
-console.log(inputYear + 18);
-//we can convert ir
-console.log(Number(inputYear), inputYear);
-console.log(Number(inputYear)+18);
+// const inputYear = '2003';
+// //this is not going to work because its an string
+// console.log(inputYear + 18);
+// //we can convert ir
+// console.log(Number(inputYear), inputYear);
+// console.log(Number(inputYear)+18);
 
-//make this to see what happend
-console.log(Number('Felix'));
-//NaN means not a number, but thats a number NaN gg
+// //make this to see what happend
+// console.log(Number('Felix'));
+// //NaN means not a number, but thats a number NaN gg
 
-console.log(String(23),23);
-//You can covert to bool, number and string
+// console.log(String(23),23);
+// //You can covert to bool, number and string
 
-//type coercion
-console.log('Iam '+18+ ' years old');
-console.log('Iam '+String(18)+ ' years old');
-console.log('23'-'10'-3);
+// //type coercion
+// console.log('Iam '+18+ ' years old');
+// console.log('Iam '+String(18)+ ' years old');
+// console.log('23'-'10'-3);
 
-//look
-let n = '1'+1; //11
-n = n-1;
-console.log(n);
+// //look
+// let n = '1'+1; //11
+// n = n-1;
+// console.log(n);
 
-n= 2+3+4+'5'//95
-n= '10'-'4'-'3'-2+'5';//15
-console.log(n);
+// n= 2+3+4+'5'//95
+// n= '10'-'4'-'3'-2+'5';//15
+// console.log(n);
 
+
+// // =======================================================
+// // =========== TRUTHY AND FALSY VALUES ===================
+// // =======================================================
+
+//FALSY are not exactly false, but become false when we try to convert them to a boolean
+
+//Falsy values:   0,'',undefined, null, NaN
+
+console.log(Boolean(0));
+console.log(Boolean(''));
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean(NaN));
+
+let money=500;
+if(money)
+	console.log("Nice");
+else
+	console.log("Go for a job");
+
+money=0;
+if(money)
+	console.log("Nice");
+else
+	console.log("Get a job");
+
+let notDefined;
+
+if(notDefined)
+	console.log("is defined");
+else
+	console.log("you never defined it so is false");
