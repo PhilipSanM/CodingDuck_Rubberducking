@@ -99,3 +99,60 @@
 #     print("Bro you hate cheese")
 
 
+# ====================
+# ====== EXERCISE #2 =
+# ====================
+#
+# dollar_euro = 0.91
+# pound_euro = 1.18
+#
+# option = input("Select an option:\n"
+#                "A.- Covert dollar to euro\n"
+#                "B.- Convert euro to dollar\n"
+#                "C.- Convert pound to euro\n"
+#                "D.- Convert euro to pound\n"
+#                ":")
+#
+# text = "Introduce the amount of {} to convert: "
+#
+# if option == "A":
+#     amount_of_money = float(input(text.format("dollar")))
+#     print("The amount of euro is: {}".format(amount_of_money*dollar_euro))
+# elif option == "B":
+#     amount_of_money = float(input(text.format("Euro")))
+#     print("The amount of euro is: {}".format(amount_of_money/dollar_euro))
+# elif option == "C":
+#     amount_of_money = float(input(text.format("Pound")))
+#     print("The amount of euro is: {}".format(amount_of_money*pound_euro))
+# elif option == "D":
+#     amount_of_money = float(input(text.format("Euro")))
+#     print("The amount of euro is: {}".format(amount_of_money/pound_euro))
+# else:
+#     print("You don't select a correct option")
+
+# ====================
+# ====== EXERCISE #3 =
+# ====================
+# option = input("[I]IOS or [A]Android?: ")
+# best_phone = "none"
+# if option == "A":
+#     option = input("Do you have enough money [Y/N]: ")
+#     if option == "Y":
+#         option = input("Do you want to change your phone camera [Y/N]: ")
+#         if option == "Y":
+#             best_phone = "Google Pixel"
+#         else:
+#             best_phone = "Xiaomi xd"
+#     else:
+#         best_phone = "Whatever chinese product with andorid"
+# elif option == "I":
+#     option = input("Do you have enough money [Y/N]: ")
+#     if option == "Y":
+#         best_phone = "Iphone ultra plus Max"
+#     else:
+#         best_phone = "Whatever iphone"
+# else:
+#     print("That's not an option")
+#
+# print("Your best movil is: {}".format(best_phone))
+# print("Your best phone is: " + best_phone)
