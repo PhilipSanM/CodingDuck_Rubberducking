@@ -276,31 +276,69 @@
 // // =========== TRUTHY AND FALSY VALUES ===================
 // // =======================================================
 
-//FALSY are not exactly false, but become false when we try to convert them to a boolean
+// //FALSY are not exactly false, but become false when we try to convert them to a boolean
 
-//Falsy values:   0,'',undefined, null, NaN
+// //Falsy values:   0,'',undefined, null, NaN
 
-console.log(Boolean(0));
-console.log(Boolean(''));
-console.log(Boolean(undefined));
-console.log(Boolean(null));
-console.log(Boolean(NaN));
+// console.log(Boolean(0));
+// console.log(Boolean(''));
+// console.log(Boolean(undefined));
+// console.log(Boolean(null));
+// console.log(Boolean(NaN));
 
-let money=500;
-if(money)
-	console.log("Nice");
-else
-	console.log("Go for a job");
+// let money=500;
+// if(money)
+// 	console.log("Nice");
+// else
+// 	console.log("Go for a job");
 
-money=0;
-if(money)
-	console.log("Nice");
-else
-	console.log("Get a job");
+// money=0;
+// if(money)
+// 	console.log("Nice");
+// else
+// 	console.log("Get a job");
 
-let notDefined;
+// let notDefined;
 
-if(notDefined)
-	console.log("is defined");
-else
-	console.log("you never defined it so is false");
+// if(notDefined)
+// 	console.log("is defined");
+// else
+// 	console.log("you never defined it so is false");
+
+// // =======================================================
+// // =========== EQUALITY OPERATORS == vs === ===================
+// // =======================================================
+
+const age = '18';
+//const age = 18;
+// =:
+	//This mean exactly =
+// ==:
+	//This made COarcion, it means U can write
+	// '18' == 18;
+	// And will give you true even '18' is string and 18 a number
+// ===:
+	//This mean exactly that like:
+	// '18' === 18; wil give u false
+	//because is not a string
+if(age === 18)
+	console.log('You just became an adult');
+if(age == 18)
+	console.log('You just became an adult');
+
+//You can use better ===  because is better to prevent BUGS
+
+// PROMP
+
+const favourite = prompt("Whats your favorite number?");
+
+console.log(favourite);
+console.log(typeof(favourite));
+
+if(favourite == 18){
+	console.log('With "favorite number"');
+}
+
+if(favourite === 18){
+	console.log('This line will not work');
+}
