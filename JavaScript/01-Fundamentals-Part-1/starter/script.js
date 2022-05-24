@@ -305,41 +305,41 @@
 // else
 // 	console.log("you never defined it so is false");
 
-// // =======================================================
-// // =========== EQUALITY OPERATORS == vs === ===================
-// // =======================================================
+// =======================================================
+// =========== EQUALITY OPERATORS == vs === ===================
+// =======================================================
 
-// const age = '18';
-// //const age = 18;
-// // =:
-// 	//This mean exactly =
-// // ==:
-// 	//This made COarcion, it means U can write
-// 	// '18' == 18;
-// 	// And will give you true even '18' is string and 18 a number
-// // ===:
-// 	//This mean exactly that like:
-// 	// '18' === 18; wil give u false
-// 	//because is not a string
-// if(age === 18)
-// 	console.log('You just became an adult');
-// if(age == 18)
-// 	console.log('You just became an adult');
+const age = '18';
+//const age = 18;
+// =:
+	//This mean exactly =
+// ==:
+	//This made COarcion, it means U can write
+	// '18' == 18;
+	// And will give you true even '18' is string and 18 a number
+// ===:
+	//This mean exactly that like:
+	// '18' === 18; wil give u false
+	//because is not a string
+if(age === 18)
+	console.log('You just became an adult');
+if(age == 18)
+	console.log('You just became an adult');
 
-// //You can use better ===  because is better to prevent BUGS
+//You can use better ===  because is better to prevent BUGS
 
-// // PROMP
+// PROMP
 
-// const favourite = prompt("Whats your favorite number?");
+const favourite = prompt("Whats your favorite number?");
 
-// console.log(favourite);
-// console.log(typeof(favourite));
-// //This give u a string
+console.log(favourite);
+console.log(typeof(favourite));
+//This give u a string
 
-// if(favourite == 18){ //TRUE
-// 	console.log('With "favorite number"');
-// }
+if(favourite == 18){ //TRUE
+	console.log('With "favorite number"');
+}
 
-// if(favourite === 18){ //FALSE because is string
-// 	console.log('This line will not work');
-// }
+if(favourite === 18){ //FALSE because is string
+	console.log('This line will not work');
+}
