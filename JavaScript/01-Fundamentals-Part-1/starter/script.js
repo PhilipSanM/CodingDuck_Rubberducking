@@ -343,3 +343,8 @@
 // if(favourite === 18){ //FALSE because is string
 // 	console.log('This line will not work');
 // }
+
+const hasDriversLicence = true; //A
+const hasGoodVision = true;//B
+
+console.log(hasDriversLicence && hasGoodVision);
