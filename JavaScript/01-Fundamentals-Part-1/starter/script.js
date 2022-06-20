@@ -419,7 +419,7 @@
 // =========== SWITCH STATMENT ===========================
 // =======================================================
 
-const day = 'monday';
+const day = 'saturday';
 switch(day) {
 	case 'monday': // day === 'monday'
 		console.log('Plan course strcuture');
@@ -434,7 +434,28 @@ switch(day) {
 	case 'friday':
 		console.log('lol');
 		break;
+	//Twise
+	case 'saturday':
+	case 'sunday':
+		console.log('bro free days');
+		break;
 	default:
 		console.log("error that's not a day");	
 		break;
+}
+//this is the same
+
+if (day === 'monday') {
+	console.log('Plan course strcuture');
+	console.log('Go fot it');
+} else if (day === 'tuesday') {
+  console.log('Prepare theory videos');
+} else if (day === 'thursday') {
+  console.log('IDK');
+} else if (day === 'friday') {
+  console.log('lol');
+} else if (day === 'saturday' || day === 'sunday') {
+  console.log('Enjoy the weekend :D');
+} else {
+  console.log('Not a valid day!');
 }
