@@ -415,47 +415,92 @@
 // }
 
 
-// =======================================================
-// =========== SWITCH STATMENT ===========================
-// =======================================================
+// // =======================================================
+// // =========== SWITCH STATMENT ===========================
+// // =======================================================
 
-const day = 'saturday';
-switch(day) {
-	case 'monday': // day === 'monday'
-		console.log('Plan course strcuture');
-		console.log('Go fot it');
-		break;
-	case 'tuesday':
-		console.log('make my video');
-		break;
-	case 'thursday':
-		console.log('IDK');
-		break;
-	case 'friday':
-		console.log('lol');
-		break;
-	//Twise
-	case 'saturday':
-	case 'sunday':
-		console.log('bro free days');
-		break;
-	default:
-		console.log("error that's not a day");	
-		break;
-}
-//this is the same
+// const day = 'saturday';
+// switch(day) {
+// 	case 'monday': // day === 'monday'
+// 		console.log('Plan course strcuture');
+// 		console.log('Go fot it');
+// 		break;
+// 	case 'tuesday':
+// 		console.log('make my video');
+// 		break;
+// 	case 'thursday':
+// 		console.log('IDK');
+// 		break;
+// 	case 'friday':
+// 		console.log('lol');
+// 		break;
+// 	//Twise
+// 	case 'saturday':
+// 	case 'sunday':
+// 		console.log('bro free days');
+// 		break;
+// 	default:
+// 		console.log("error that's not a day");	
+// 		break;
+// }
+// //this is the same
 
-if (day === 'monday') {
-	console.log('Plan course strcuture');
-	console.log('Go fot it');
-} else if (day === 'tuesday') {
-  console.log('Prepare theory videos');
-} else if (day === 'thursday') {
-  console.log('IDK');
-} else if (day === 'friday') {
-  console.log('lol');
-} else if (day === 'saturday' || day === 'sunday') {
-  console.log('Enjoy the weekend :D');
+// if (day === 'monday') {
+// 	console.log('Plan course strcuture');
+// 	console.log('Go fot it');
+// } else if (day === 'tuesday') {
+//   console.log('Prepare theory videos');
+// } else if (day === 'thursday') {
+//   console.log('IDK');
+// } else if (day === 'friday') {
+//   console.log('lol');
+// } else if (day === 'saturday' || day === 'sunday') {
+//   console.log('Enjoy the weekend :D');
+// } else {
+//   console.log('Not a valid day!');
+// }
+
+// // // =======================================================
+// // // =========== STATMENT & EXPRESIONS =====================
+// // // =======================================================
+
+// //EXPRESION produce a value
+// //STATMENT sentence that translate into actions
+
+// if (23 > 10) {
+//   const str = '23 is bigger';
+// }
+
+// const me = 'Jonas';
+// console.log(`I'm ${2037 - 1991} years old ${me}`);
+// //me is an expression, and that years is also an expresion but
+// //U can not write a statmente like:
+// 	// const me = 'Jonas';
+// //in that {} because is an statment
+
+
+// // =======================================================
+// // =========== TERNARY CONDITIONAL ========================
+// // =======================================================
+const age = 18;
+
+age >= 18 ? console.log('I wanna drink my beer'):
+console.log('Just watter little boy');
+
+//CONDITION, IF part, and else part
+
+//A VALUE NEEDS AN EXPRESION SO U CAN DO THIS
+
+const drink = age >= 18 ? 'wine': 'water';
+console.log(drink);
+
+let drink2;
+if (age >= 18) {
+  drink2 = 'wine 🍷';
 } else {
-  console.log('Not a valid day!');
+  drink2 = 'water 💧';
 }
+console.log(drink2);
+//OR u can put that, because is an expresion, or u can make it a value
+console.log(`I like to drink ${age >= 18 ? 'wine 🍷' : 'water 💧'}`);
+console.log(`I like to drink ${drink}`);
