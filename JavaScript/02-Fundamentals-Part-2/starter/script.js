@@ -241,44 +241,80 @@
 // console.log(ages);
 
 
-// // =======================================================
-// // =========== ARRAY METHODS =======================
-// // =======================================================
-const friends = ['Felipe', 'Diego', 'Luz'];
+// // // =======================================================
+// // // =========== ARRAY METHODS =======================
+// // // =======================================================
+// const friends = ['Felipe', 'Diego', 'Luz'];
 
-// //psuh method for Adding elements
-// friends.push('Elias');
+// // //psuh method for Adding elements
+// // friends.push('Elias');
+// // //Includes another variable at the end, it return something
+// // console.log(friends);
+
+// //Check the lenght of the array
+// const newLength = friends.push('Elias');
 // //Includes another variable at the end, it return something
 // console.log(friends);
+// console.log(newLength);
+// //Adding in fornt
+// friends.unshift('Johan');
+// console.log(friends);
 
-//Check the lenght of the array
-const newLength = friends.push('Elias');
-//Includes another variable at the end, it return something
-console.log(friends);
-console.log(newLength);
-//Adding in fornt
-friends.unshift('Johan');
-console.log(friends);
+// //Remove elements:
+// friends.pop();
+// const popped = friends.pop()
+// console.log(friends);
+// console.log(popped);
 
-//Remove elements:
-friends.pop();
-const popped = friends.pop()
-console.log(friends);
-console.log(popped);
+// //Removing in front
+// friends.shift();
+// console.log(friends);
 
-//Removing in front
-friends.shift();
-console.log(friends);
+// //Position of the element
+// console.log(friends.indexOf('Diego'));
+// console.log(friends.indexOf('Bob')); //gives u -1 because is not in the array
+// //For a boolean
+// console.log(friends.includes('Diego'));
+// console.log(friends.includes('Bob')); //gives u -1 because is not in the array
+// //Remember coarsion so if you do
+// friends.push(23);
+// console.log(friends.includes('23')); //FALSE 23 is not equal to '23'
 
-//Position of the element
-console.log(friends.indexOf('Diego'));
-console.log(friends.indexOf('Bob')); //gives u -1 because is not in the array
-//For a boolean
-console.log(friends.includes('Diego'));
-console.log(friends.includes('Bob')); //gives u -1 because is not in the array
-//Remember coarsion so if you do
-friends.push(23);
-console.log(friends.includes('23')); //FALSE 23 is not equal to '23'
+// if(friends.includes('Diego'))
+// 	console.log('There is some Diego');
 
-if(friends.includes('Diego'))
-	console.log('There is some Diego');
+// // =======================================================
+// // =========== CODING CHALLENGE #2 =======================
+// // =======================================================
+
+
+/*
+Steven is still building his tip calculator, using the same rules as before: Tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
+
+1. Write a function 'calcTip' that takes any bill value as an input and returns the corresponding tip, calculated based on the rules above (you can check out the code from first tip calculator challenge if you need to). Use the function type you like the most. Test the function using a bill value of 100.
+2. And now let's use arrays! So create an array 'bills' containing the test data below.
+3. Create an array 'tips' containing the tip value for each bill, calculated from the function you created before.
+4. BONUS: Create an array 'total' containing the total values, so the bill + tip.
+
+TEST DATA: 125, 555 and 44
+
+HINT: Remember that an array needs a value in each position, and that value can actually be the returned value of a function! So you can just call a function as array values (so don't store the tip values in separate variables first, but right in the new array) 😉
+
+GOOD LUCK 😀
+*/
+
+
+function calcTip(bill){
+	if(50<= bill <= 300){
+		return bill* 0.15;
+	}else
+		return bill* 0.20;
+}
+
+const bills = new Array(125,555,44);
+const tips = [calcTip(bills[0]),calcTip(bills[1]),calcTip(bills[2])];
+console.log(bills);
+console.log(tips);
+//BONUS
+const total = [tips[0]+bills[0],tips[1]+bills[1],tips[2]+bills[2]]
+console.log(total);
