@@ -322,54 +322,221 @@ GOOD LUCK 😀
 // // =======================================================
 // // =========== O B J E C T S =======================
 // // =======================================================
-//The orden imports alot
-const jonasArray = [
-	'Jonas',
-	'Sanch',
-	2003,
-	'Professor'
-];
-//You cant give them a name, so for that, we are going to use objedts
-//Simples way to create an object :) enjoy it
-//You have a name
-const jonas = {
-	firstName: 'Jonas',
-	lastName: 'Sanchez',
-	job: 'Professor',
-	friends: ['Felipe', 'Diego', 'Luz'],
-	age: 12
-}
+// //The orden imports alot
+// const jonasArray = [
+// 	'Jonas',
+// 	'Sanch',
+// 	2003,
+// 	'Professor'
+// ];
+// //You cant give them a name, so for that, we are going to use objedts
+// //Simples way to create an object :) enjoy it
+// //You have a name
+// const jonas = {
+// 	firstName: 'Jonas',
+// 	lastName: 'Sanchez',
+// 	job: 'Professor',
+// 	friends: ['Felipe', 'Diego', 'Luz'],
+// 	age: 12
+// }
 
-//How to enter into an object
-// *U use a property name as it appears in the object
-console.log(jonas);
-console.log(jonas.lastName);
-//or brakets notation
-console.log(jonas['lastName']);
-//That you use when:
-//When you have to use it
-const nameKey = 'Name';
-console.log(jonas['first' + nameKey]);
-console.log(jonas['last' + nameKey]);
-//HEY YOU CAN USE THAT LIKE
-const interestedIn = prompt('What do you want to know about Jonas? firstName, lastName, age');
-console.log(jonas[interestedIn]);
+// //How to enter into an object
+// // *U use a property name as it appears in the object
+// console.log(jonas);
+// console.log(jonas.lastName);
+// //or brakets notation
+// console.log(jonas['lastName']);
+// //That you use when:
+// //When you have to use it
+// const nameKey = 'Name';
+// console.log(jonas['first' + nameKey]);
+// console.log(jonas['last' + nameKey]);
+// //HEY YOU CAN USE THAT LIKE
+// const interestedIn = prompt('What do you want to know about Jonas? firstName, lastName, age');
+// console.log(jonas[interestedIn]);
 
-//If that property is not in the objtect you will fine undefined
-if(jonas[interestedIn]){
-	console.log(jonas[interestedIn]);
-} else{
-	const interestedIn = prompt('What do you want to know about Jonas? firstName, lastName, age');
-}
+// //If that property is not in the objtect you will fine undefined
+// if(jonas[interestedIn]){
+// 	console.log(jonas[interestedIn]);
+// } else{
+// 	const interestedIn = prompt('What do you want to know about Jonas? firstName, lastName, age');
+// }
 
-//YOU CAN ADD INFORMATION LIKE
+// //YOU CAN ADD INFORMATION LIKE
 
-jonas.location = "California";
-jonas['twitter'] = '@Philipsanm_';
-console.log(jonas.twitter);
-console.log(jonas);
+// jonas.location = "California";
+// jonas['twitter'] = '@Philipsanm_';
+// console.log(jonas.twitter);
+// console.log(jonas);
+// // Challenge
+// // "Jonas is a 46-year old teacher, and he has a driver's license"
+// // console.log(jonas.getSummary());
+// // "Jonas has 3 friends, and his best friend is called Michael"
+// console.log(`${jonas.firstName} has ${jonas.friends.length}, and his best frien is called ${jonas.friends[0]}`);
+
+
+// // =======================================================
+// // =========== O B J E C T S  M E T H O D S ==============
+// // =======================================================
+// const jonas = {
+// 	firstName: 'Jonas',
+// 	lastName: 'Sanchez',
+// 	job: 'Professor',
+// 	birthYear: 2003,
+// 	friends: ['Felipe', 'Diego', 'Luz'],
+// 	age: 12,
+// 	hasDriverLicense: true,
+// 	calcAge: function (birthYear) {
+// 		// body...
+// 		return 2022-birthYear;
+// 	}
+// };
+// //A function value :)))
+// //Here you need a property of the object not a function, u need a method
+// // const calcAge = function (birthday) {
+// // 	// body...
+// // 	return 2022-birthday;
+// // }
+
+// console.log(jonas.calcAge(2003));
+// //OR
+// console.log(jonas['calcAge'](2003));
+
+// //AND you have birthyear in jonas object so lets dons repeat, you dont need it
+// console.log(jonas.calcAge(jonas.birthYear));
+// //OR
+// console.log(jonas['calcAge'](jonas.birthYear));
+
+//SO LETS USE THE ONE INSIDE THE OBJECT
+//with "this"
+// const jonas = {
+// 	firstName: 'Jonas',
+// 	lastName: 'Sanchez',
+// 	job: 'Professor',
+// 	birthYear: 2003,
+// 	friends: ['Felipe', 'Diego', 'Luz'],
+// 	age: 12,
+// 	hasDriverLicense: true,
+// 	calcAge: function () {
+// 		// body...
+// 		return 2022-this.birthYear;
+// 	}
+// };
+// //A function value :)))
+// //Here you need a property of the object not a function, u need a method
+// // const calcAge = function (birthday) {
+// // 	// body...
+// // 	return 2022-birthday;
+// // }
+
+// console.log(jonas.calcAge());
+// console.log(jonas['calcAge']());
+
+// console.log(jonas.calcAge());
+// console.log(jonas['calcAge']());
+
+//You can creat a property whit this like:
+// const jonas = {
+// 	firstName: 'Jonas',
+// 	lastName: 'Sanchez',
+// 	job: 'Professor',
+// 	birthYear: 2003,
+// 	friends: ['Felipe', 'Diego', 'Luz'],
+	
+// 	hasDriverLicense: true,
+// 	calcAge: function () {
+// 		// body...
+// 		this.age = 2022-this.birthYear;
+// 		return this.age;
+// 	}
+// };
+// //A function value :)))
+// //Here you need a property of the object not a function, u need a method
+// // const calcAge = function (birthday) {
+// // 	// body...
+// // 	return 2022-birthday;
+// // }
+
+// console.log(jonas.calcAge());
+// console.log(jonas['calcAge']());
+
+// console.log(jonas.age);
+// console.log(jonas['age']);
+
 // Challenge
 // "Jonas is a 46-year old teacher, and he has a driver's license"
+// const jonas = {
+// 	firstName: 'Jonas',
+// 	lastName: 'Sanchez',
+// 	job: 'Professor',
+// 	birthYear: 2003,
+// 	friends: ['Felipe', 'Diego', 'Luz'],
+	
+// 	hasDriverLicense: true,
+// 	calcAge: function () {
+// 		// body...
+// 		this.age = 2022-this.birthYear;
+// 		return this.age;
+// 	},
+
+// 	// getSummary: function () {
+// 	// 	// body...
+// 	// 	if(this.hasDriverLicense){
+// 	// 		return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has a driver's license`;
+			
+// 	// 	}else {
+// 	// 		return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has not driver's license`; 
+
+// 	// 	}
+// 	// }
+// 	getSummary: function () {
+//     return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${this.hasDriverLicense ? 'a' : 'no'} driver's license.`
+//   	}
+
+// };
 // console.log(jonas.getSummary());
-// "Jonas has 3 friends, and his best friend is called Michael"
-console.log(`${jonas.firstName} has ${jonas.friends.length}, and his best frien is called ${jonas.friends[0]}`);
+
+// // =======================================================
+// // =========== CODING CHALLENGE #3 =======================
+// // =======================================================
+
+/*
+Let's go back to Mark and John comparing their BMIs! This time, let's use objects to implement the calculations! Remember: BMI = mass / height ** 2 = mass / (height * height). (mass in kg and height in meter)
+
+1. For each of them, create an object with properties for their full name, mass, and height (Mark Miller and John Smith)
+2. Create a 'calcBMI' method on each object to calculate the BMI (the same method on both objects). Store the BMI value to a property, and also return it from the method.
+3. Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!"
+
+TEST DATA: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
+
+GOOD LUCK 😀
+*/
+const mark = {
+	fullName: 'Mark Miller',
+	mass: 78,
+	height: 1.69,
+	calcBMI: function () {
+		// body...
+		this.bmi = this.mass/this.height**2;
+		return this.bmi;
+	}
+};
+const john = {
+	fullName: 'John Smith',
+	mass: 92,
+	height: 1.95,
+	calcBMI: function () {
+		// body...
+		this.bmi = this.mass/this.height**2;
+		return this.bmi;
+	}
+};
+
+mark.calcBMI();
+john.calcBMI();
+console.log(mark.bmi,john.bmi);
+if (mark.bmi > john.bmi) {
+  console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s BMI (${john.bmi})`)
+} else if (john.bmi > mark.bmi) {
+  console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s BMI (${mark.bmi})`)
+}
