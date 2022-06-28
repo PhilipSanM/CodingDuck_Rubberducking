@@ -511,32 +511,164 @@ TEST DATA: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.9
 
 GOOD LUCK 😀
 */
-const mark = {
-	fullName: 'Mark Miller',
-	mass: 78,
-	height: 1.69,
-	calcBMI: function () {
-		// body...
-		this.bmi = this.mass/this.height**2;
-		return this.bmi;
-	}
-};
-const john = {
-	fullName: 'John Smith',
-	mass: 92,
-	height: 1.95,
-	calcBMI: function () {
-		// body...
-		this.bmi = this.mass/this.height**2;
-		return this.bmi;
-	}
-};
+// const mark = {
+// 	fullName: 'Mark Miller',
+// 	mass: 78,
+// 	height: 1.69,
+// 	calcBMI: function () {
+// 		// body...
+// 		this.bmi = this.mass/this.height**2;
+// 		return this.bmi;
+// 	}
+// };
+// const john = {
+// 	fullName: 'John Smith',
+// 	mass: 92,
+// 	height: 1.95,
+// 	calcBMI: function () {
+// 		// body...
+// 		this.bmi = this.mass/this.height**2;
+// 		return this.bmi;
+// 	}
+// };
 
-mark.calcBMI();
-john.calcBMI();
-console.log(mark.bmi,john.bmi);
-if (mark.bmi > john.bmi) {
-  console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s BMI (${john.bmi})`)
-} else if (john.bmi > mark.bmi) {
-  console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s BMI (${mark.bmi})`)
-}
+// mark.calcBMI();
+// john.calcBMI();
+// console.log(mark.bmi,john.bmi);
+// if (mark.bmi > john.bmi) {
+//   console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s BMI (${john.bmi})`)
+// } else if (john.bmi > mark.bmi) {
+//   console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s BMI (${mark.bmi})`)
+// }
+
+// // =======================================================
+// // =========== FOR LOOOP =======================
+// // =======================================================
+// console.log('Lifting weights repetition 1 🏋️‍♀️');
+// console.log('Lifting weights repetition 2 🏋️‍♀️');
+// console.log('Lifting weights repetition 3 🏋️‍♀️');
+// console.log('Lifting weights repetition 4 🏋️‍♀️');
+// console.log('Lifting weights repetition 5 🏋️‍♀️');
+// console.log('Lifting weights repetition 6 🏋️‍♀️');
+// console.log('Lifting weights repetition 7 🏋️‍♀️');
+// console.log('Lifting weights repetition 8 🏋️‍♀️');
+// console.log('Lifting weights repetition 9 🏋️‍♀️');
+// console.log('Lifting weights repetition 10 🏋️‍♀️');
+// // Loop:
+// for (let rep = 1; rep <= 30; rep++) {
+//   console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
+// }
+
+// //---- FOR AND ARRAYS------
+// const jonas = [
+//   'Jonas',
+//   'Schmedtmann',
+//   2037 - 1991,
+//   'teacher',
+//   ['Michael', 'Peter', 'Steven']
+// ];
+
+// for (let i = 1; i < 5; i++) {
+//   console.log(jonas[i]);
+// };
+
+// const jonas2 = [
+//   'Jonas',
+//   'Schmedtmann',
+//   2037 - 1991,
+//   'teacher',
+//   ['Michael', 'Peter', 'Steven'],
+//   true
+// ];
+
+// for (let i = 0; i < jonas2.length; i++) {
+//   console.log(jonas2[i], typeof jonas2[i]);
+// }
+
+// //Lets make another array with the typs
+// //making an empty array
+// const types = [];
+
+// const jonas3 = [
+//   'Jonas',
+//   'Schmedtmann',
+//   2037 - 1991,
+//   'teacher',
+//   ['Michael', 'Peter', 'Steven'],
+//   true
+// ];
+
+// for (let i = 0; i < jonas3.length; i++) {
+//   console.log(jonas3[i], typeof jonas3[i]);
+//   //Filling an array;
+//   // types[i] = typeof jonas3[i];
+//   types.push(typeof jonas3[i]);
+// }
+
+// console.log(types);
+// const years = [1991, 2007, 1969, 2020];
+// const ages = [];
+
+// for (let i = 0; i < years.length; i++) {
+//   ages.push(2037 - years[i]);
+// }
+// console.log(ages);
+
+// // continue and break
+// console.log('--- ONLY STRINGS ---')
+// for (let i = 0; i < jonas.length; i++) {
+//   if (typeof jonas[i] !== 'string') continue;
+
+//   console.log(jonas[i], typeof jonas[i]);
+// }
+
+// console.log('--- BREAK WITH NUMBER ---')
+// for (let i = 0; i < jonas.length; i++) {
+//   if (typeof jonas[i] === 'number') break;
+
+//   console.log(jonas[i], typeof jonas[i]);
+// }
+
+// // Looping Backwards and Loops in Loops
+// const jonas = [
+//   'Jonas',
+//   'Schmedtmann',
+//   2037 - 1991,
+//   'teacher',
+//   ['Michael', 'Peter', 'Steven'],
+//   true
+// ];
+
+// // 0, 1, ..., 4
+// // 4, 3, ..., 0
+
+// for (let i = jonas.length - 1; i >= 0; i--) {
+//   console.log(i, jonas[i]);
+// }
+
+// for (let exercise = 1; exercise < 4; exercise++) {
+//   console.log(`-------- Starting exercise ${exercise}`);
+
+//   for (let rep = 1; rep < 6; rep++) {
+//     console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋️‍♀️`);
+//   }
+// }
+
+// // The while Loop
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
+// }
+
+// let rep = 1;
+// while (rep <= 10) {
+//   console.log(`WHILE: Lifting weights repetition ${rep} 🏋️‍♀️`);
+//   rep++;
+// }
+
+// let random = Math.trunc(Math.random() * 6) + 1;
+
+// while (random !== 6) {
+//   console.log(`You rolled a ${random}`);
+//   random = Math.trunc(Math.random() * 6) + 1;
+//   (random === 6)? console.log('Loop is about to end...',random): console.log(random);
+// }
