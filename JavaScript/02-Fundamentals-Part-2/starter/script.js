@@ -304,17 +304,72 @@ GOOD LUCK 😀
 */
 
 
-function calcTip(bill){
-	if(50<= bill <= 300){
-		return bill* 0.15;
-	}else
-		return bill* 0.20;
+// function calcTip(bill){
+// 	if(50<= bill <= 300){
+// 		return bill* 0.15;
+// 	}else
+// 		return bill* 0.20;
+// }
+
+// const bills = new Array(125,555,44);
+// const tips = [calcTip(bills[0]),calcTip(bills[1]),calcTip(bills[2])];
+// console.log(bills);
+// console.log(tips);
+// //BONUS
+// const total = [tips[0]+bills[0],tips[1]+bills[1],tips[2]+bills[2]]
+// console.log(total);
+
+// // =======================================================
+// // =========== O B J E C T S =======================
+// // =======================================================
+//The orden imports alot
+const jonasArray = [
+	'Jonas',
+	'Sanch',
+	2003,
+	'Professor'
+];
+//You cant give them a name, so for that, we are going to use objedts
+//Simples way to create an object :) enjoy it
+//You have a name
+const jonas = {
+	firstName: 'Jonas',
+	lastName: 'Sanchez',
+	job: 'Professor',
+	friends: ['Felipe', 'Diego', 'Luz'],
+	age: 12
 }
 
-const bills = new Array(125,555,44);
-const tips = [calcTip(bills[0]),calcTip(bills[1]),calcTip(bills[2])];
-console.log(bills);
-console.log(tips);
-//BONUS
-const total = [tips[0]+bills[0],tips[1]+bills[1],tips[2]+bills[2]]
-console.log(total);
+//How to enter into an object
+// *U use a property name as it appears in the object
+console.log(jonas);
+console.log(jonas.lastName);
+//or brakets notation
+console.log(jonas['lastName']);
+//That you use when:
+//When you have to use it
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
+//HEY YOU CAN USE THAT LIKE
+const interestedIn = prompt('What do you want to know about Jonas? firstName, lastName, age');
+console.log(jonas[interestedIn]);
+
+//If that property is not in the objtect you will fine undefined
+if(jonas[interestedIn]){
+	console.log(jonas[interestedIn]);
+} else{
+	const interestedIn = prompt('What do you want to know about Jonas? firstName, lastName, age');
+}
+
+//YOU CAN ADD INFORMATION LIKE
+
+jonas.location = "California";
+jonas['twitter'] = '@Philipsanm_';
+console.log(jonas.twitter);
+console.log(jonas);
+// Challenge
+// "Jonas is a 46-year old teacher, and he has a driver's license"
+// console.log(jonas.getSummary());
+// "Jonas has 3 friends, and his best friend is called Michael"
+console.log(`${jonas.firstName} has ${jonas.friends.length}, and his best frien is called ${jonas.friends[0]}`);
