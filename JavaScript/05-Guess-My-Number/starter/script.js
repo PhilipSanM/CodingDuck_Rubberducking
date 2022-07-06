@@ -50,9 +50,16 @@ document.querySelector('.check').addEventListener('click', function () {
   console.log(guess);
   if (!guess) {
     document.querySelector('.message').textContent = 'Pls insert a number';
+
+    //When the player wins
   } else if (guess === number) {
     document.querySelector('.number').textContent = number;
     document.querySelector('.message').textContent = 'Correct Number Congrats';
+
+    //Lets manipulate the CSS
+    document.querySelector('body').style.backgroundColor = '#60b347';
+    document.querySelector('.number').style.width = '30rem';
+    //Now it looks nicer
   } else if (guess > number) {
     if (score > 1) {
       document.querySelector('.message').textContent = 'Too High';
