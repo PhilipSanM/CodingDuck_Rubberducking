@@ -40,7 +40,7 @@
 //LETS BUILD THEPAGE NOW
 //Lets define the secrect number
 
-const number = Math.trunc(Math.random() * 20) + 1;
+let number = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 console.log(number);
 document.querySelector('.check').addEventListener('click', function () {
@@ -79,4 +79,29 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.message').textContent = 'YOU LOST';
     }
   }
+});
+
+///////////////////////////////////////
+// Coding Challenge #1
+
+/* 
+Implement a game rest functionality, so that the player can make a new guess! Here is how:
+
+1. Select the element with the 'again' class and attach a click event handler
+2. In the handler function, restore initial values of the score and secretNumber variables
+3. Restore the initial conditions of the message, number, score and guess input field
+4. Also restore the original background color (#222) and number width (15rem)
+
+GOOD LUCK 😀
+*/
+
+//Implementation of the again botton:
+document.querySelector('.again').addEventListener('click', function () {
+  number = Math.trunc(Math.random() * 20) + 1;
+  score = 20;
+  document.querySelector('.message').textContent = 'Start guessing...';
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.number').style.width = '15rem';
+  document.querySelector('.score').textContent = score;
+  document.querySelector('.number').textContent = '?';
 });
