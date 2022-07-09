@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 //STRICT MODE this is gonna be the first line
 // //Instroduce bugs and visible errors
 
@@ -12,7 +12,7 @@
 // let const = 24;
 
 // const interface = 'Audio';
-// 
+//
 //==============================
 //==== F U N C T I O N S =======
 //==============================
@@ -27,7 +27,7 @@
 // //Function with parametters and return somethign
 // function fruitProcessor(apples, oranges){
 // 	console.log(apples,oranges);
-// 	const juice = `Juice with ${apples} apples and ${oranges} oranges`;	
+// 	const juice = `Juice with ${apples} apples and ${oranges} oranges`;
 // 	return juice;
 // }
 // //You can make a variable to print
@@ -114,12 +114,11 @@
 // 	const applesPieces = cutFruitPieces(apples);
 // 	const orangesPieces = cutFruitPieces(oranges);
 
-// 	const juice = `Juice with ${applesPieces} pieces of apple and ${orangesPieces} pieces of oranges`;	
+// 	const juice = `Juice with ${applesPieces} pieces of apple and ${orangesPieces} pieces of oranges`;
 // 	return juice;
 // }
 
 // console.log(fruitProcessor(2,3));
-
 
 // ///////////////////////////////////////
 // // Reviewing Functions
@@ -143,7 +142,6 @@
 // console.log(yearsUntilRetirement(1991, 'Jonas'));
 // console.log(yearsUntilRetirement(1950, 'Mike'));
 
-
 // // =======================================================
 // // =========== CODING CHALLENGE #1 =======================
 // // =======================================================
@@ -166,10 +164,9 @@
 
 // GOOD LUCK 😀
 
-
 // const calcAverage = (socore1,score2,score3) =>{
 // 	return (socore1+score2+score3)/3;
-// } 
+// }
 
 // function checkWinner(avgDolphin,avgKoalas) {
 // 	// body...
@@ -191,7 +188,6 @@
 // console.log(avgDolphin,avgKoalas);
 // checkWinner(avgDolphin,avgKoalas);
 
-
 // // =======================================================
 // // =========== A R R A Y S =======================
 // // =======================================================
@@ -199,7 +195,7 @@
 // const calcAge = function (birthYeah) {
 //   return 2037 - birthYeah;
 // }
-// // <>You can have the array like this 
+// // <>You can have the array like this
 // const friend1 = 'Carlos';
 // const friends = ['Felipe', 'Diego', 'Luz'];
 // console.log(friends);
@@ -240,11 +236,10 @@
 // const ages = [calcAge(yearA[0]),calcAge(yearA[2]),calcAge(yearA[3])]
 // console.log(ages);
 
-
 // // // =======================================================
 // // // =========== ARRAY METHODS =======================
 // // // =======================================================
-// const friends = ['Felipe', 'Diego', 'Luz'];
+// const friends = ["Felipe", "Diego", "Luz"];
 
 // // //psuh method for Adding elements
 // // friends.push('Elias');
@@ -252,17 +247,22 @@
 // // console.log(friends);
 
 // //Check the lenght of the array
-// const newLength = friends.push('Elias');
+// // const newLength = friends.push("Elias");
+// const newLength = [...friends];
+// newLength.push("LAL");
+
 // //Includes another variable at the end, it return something
 // console.log(friends);
+// console.log("//////");
 // console.log(newLength);
 // //Adding in fornt
-// friends.unshift('Johan');
+// friends.unshift("Johan");
+// console.log("sdsdds");
 // console.log(friends);
 
 // //Remove elements:
 // friends.pop();
-// const popped = friends.pop()
+// const popped = friends.pop();
 // console.log(friends);
 // console.log(popped);
 
@@ -271,22 +271,20 @@
 // console.log(friends);
 
 // //Position of the element
-// console.log(friends.indexOf('Diego'));
-// console.log(friends.indexOf('Bob')); //gives u -1 because is not in the array
+// console.log(friends.indexOf("Diego"));
+// console.log(friends.indexOf("Bob")); //gives u -1 because is not in the array
 // //For a boolean
-// console.log(friends.includes('Diego'));
-// console.log(friends.includes('Bob')); //gives u -1 because is not in the array
+// console.log(friends.includes("Diego"));
+// console.log(friends.includes("Bob")); //gives u -1 because is not in the array
 // //Remember coarsion so if you do
 // friends.push(23);
-// console.log(friends.includes('23')); //FALSE 23 is not equal to '23'
+// console.log(friends.includes("23")); //FALSE 23 is not equal to '23'
 
-// if(friends.includes('Diego'))
-// 	console.log('There is some Diego');
+// if (friends.includes("Diego")) console.log("There is some Diego");
 
 // // =======================================================
 // // =========== CODING CHALLENGE #2 =======================
 // // =======================================================
-
 
 /*
 Steven is still building his tip calculator, using the same rules as before: Tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
@@ -302,7 +300,6 @@ HINT: Remember that an array needs a value in each position, and that value can 
 
 GOOD LUCK 😀
 */
-
 
 // function calcTip(bill){
 // 	if(50<= bill <= 300){
@@ -374,53 +371,80 @@ GOOD LUCK 😀
 // // "Jonas has 3 friends, and his best friend is called Michael"
 // console.log(`${jonas.firstName} has ${jonas.friends.length}, and his best frien is called ${jonas.friends[0]}`);
 
-
 // // =======================================================
 // // =========== O B J E C T S  M E T H O D S ==============
 // // =======================================================
 // const jonas = {
-// 	firstName: 'Jonas',
-// 	lastName: 'Sanchez',
-// 	job: 'Professor',
-// 	birthYear: 2003,
-// 	friends: ['Felipe', 'Diego', 'Luz'],
-// 	age: 12,
-// 	hasDriverLicense: true,
-// 	calcAge: function (birthYear) {
-// 		// body...
-// 		return 2022-birthYear;
-// 	}
+//   firstName: "Jonas",
+//   lastName: "Sanchez",
+//   job: "Professor",
+//   birthYear: 2003,
+//   friends: ["Felipe", "Diego", "Luz"],
+//   age: 12,
+//   hasDriverLicense: true,
+//   calcAge: function (birthYear) {
+//     // body...
+//     return 2022 - birthYear;
+//   },
 // };
-// //A function value :)))
-// //Here you need a property of the object not a function, u need a method
-// // const calcAge = function (birthday) {
-// // 	// body...
-// // 	return 2022-birthday;
-// // }
+//A function value :)))
+//Here you need a property of the object not a function, u need a method
+// const calcAge = function (birthday) {
+// 	// body...
+// 	return 2022-birthday;
+// }
 
 // console.log(jonas.calcAge(2003));
 // //OR
-// console.log(jonas['calcAge'](2003));
+// console.log(jonas["calcAge"](2003));
 
 // //AND you have birthyear in jonas object so lets dons repeat, you dont need it
 // console.log(jonas.calcAge(jonas.birthYear));
 // //OR
-// console.log(jonas['calcAge'](jonas.birthYear));
+// console.log(jonas["calcAge"](jonas.birthYear));
 
-//SO LETS USE THE ONE INSIDE THE OBJECT
-//with "this"
+// // SO LETS USE THE ONE INSIDE THE OBJECT
+// // with "this"
 // const jonas = {
-// 	firstName: 'Jonas',
-// 	lastName: 'Sanchez',
-// 	job: 'Professor',
-// 	birthYear: 2003,
-// 	friends: ['Felipe', 'Diego', 'Luz'],
-// 	age: 12,
-// 	hasDriverLicense: true,
-// 	calcAge: function () {
-// 		// body...
-// 		return 2022-this.birthYear;
-// 	}
+//   firstName: "Jonas",
+//   lastName: "Sanchez",
+//   job: "Professor",
+// //   birthYear: 2003,
+// //   friends: ["Felipe", "Diego", "Luz"],
+// //   age: 12,
+// //   hasDriverLicense: true,
+// //   calcAge: function () {
+// //     // body...
+// //     return 2022 - this.birthYear;
+// //   },
+// // };
+// // // A function value :)))
+// // // Here you need a property of the object not a function, u need a method
+// // const calcAge = function (birthday) {
+// //   // body...
+// //   return 2022 - birthday;
+// // };
+
+// // console.log(jonas.calcAge());
+// // console.log(jonas["calcAge"]());
+
+// // console.log(jonas.calcAge());
+// // console.log(jonas["calcAge"]());
+
+// // You can creat a property whit this like:
+// const jonas = {
+//   firstName: "Jonas",
+//   lastName: "Sanchez",
+//   job: "Professor",
+//   birthYear: 2003,
+//   friends: ["Felipe", "Diego", "Luz"],
+
+//   hasDriverLicense: true,
+//   calcAge: function () {
+//     // body...
+//     this.age = 2022 - this.birthYear;
+//     return this.age;
+//   },
 // };
 // //A function value :)))
 // //Here you need a property of the object not a function, u need a method
@@ -430,70 +454,42 @@ GOOD LUCK 😀
 // // }
 
 // console.log(jonas.calcAge());
-// console.log(jonas['calcAge']());
-
-// console.log(jonas.calcAge());
-// console.log(jonas['calcAge']());
-
-//You can creat a property whit this like:
-// const jonas = {
-// 	firstName: 'Jonas',
-// 	lastName: 'Sanchez',
-// 	job: 'Professor',
-// 	birthYear: 2003,
-// 	friends: ['Felipe', 'Diego', 'Luz'],
-	
-// 	hasDriverLicense: true,
-// 	calcAge: function () {
-// 		// body...
-// 		this.age = 2022-this.birthYear;
-// 		return this.age;
-// 	}
-// };
-// //A function value :)))
-// //Here you need a property of the object not a function, u need a method
-// // const calcAge = function (birthday) {
-// // 	// body...
-// // 	return 2022-birthday;
-// // }
-
-// console.log(jonas.calcAge());
-// console.log(jonas['calcAge']());
+// console.log(jonas["calcAge"]());
 
 // console.log(jonas.age);
-// console.log(jonas['age']);
+// console.log(jonas["age"]);
+// console.log(jonas);
+// // Challenge;
+// // ("Jonas is a 46-year old teacher, and he has a driver's license");
+// // const jonas = {
+// // 	firstName: 'Jonas',
+// // 	lastName: 'Sanchez',
+// // 	job: 'Professor',
+// // 	birthYear: 2003,
+// // 	friends: ['Felipe', 'Diego', 'Luz'],
 
-// Challenge
-// "Jonas is a 46-year old teacher, and he has a driver's license"
-// const jonas = {
-// 	firstName: 'Jonas',
-// 	lastName: 'Sanchez',
-// 	job: 'Professor',
-// 	birthYear: 2003,
-// 	friends: ['Felipe', 'Diego', 'Luz'],
-	
-// 	hasDriverLicense: true,
-// 	calcAge: function () {
-// 		// body...
-// 		this.age = 2022-this.birthYear;
-// 		return this.age;
-// 	},
+// // 	hasDriverLicense: true,
+// // 	calcAge: function () {
+// // 		// body...
+// // 		this.age = 2022-this.birthYear;
+// // 		return this.age;
+// // 	},
 
-// 	// getSummary: function () {
-// 	// 	// body...
-// 	// 	if(this.hasDriverLicense){
-// 	// 		return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has a driver's license`;
-			
-// 	// 	}else {
-// 	// 		return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has not driver's license`; 
+// // 	// getSummary: function () {
+// // 	// 	// body...
+// // 	// 	if(this.hasDriverLicense){
+// // 	// 		return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has a driver's license`;
 
-// 	// 	}
-// 	// }
-// 	getSummary: function () {
-//     return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${this.hasDriverLicense ? 'a' : 'no'} driver's license.`
-//   	}
+// // 	// 	}else {
+// // 	// 		return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has not driver's license`;
 
-// };
+// // 	// 	}
+// // 	// }
+// // 	getSummary: function () {
+// //     return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${this.hasDriverLicense ? 'a' : 'no'} driver's license.`
+// //   	}
+
+// // };
 // console.log(jonas.getSummary());
 
 // // =======================================================
@@ -699,23 +695,23 @@ const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 let tips = [];
 let totals = [];
 
-function calcTip(bill){
-	return (50<= bill && bill <= 300) ? bill * 0.15 : bill * 0.2 ;
+function calcTip(bill) {
+  return 50 <= bill && bill <= 300 ? bill * 0.15 : bill * 0.2;
 }
-for(let i = 0 ; i < bills.length ; i++){
-	tips.push(calcTip(bills[i]));
-	totals.push(tips[i]+bills[i]);
+for (let i = 0; i < bills.length; i++) {
+  tips.push(calcTip(bills[i]));
+  totals.push(tips[i] + bills[i]);
 }
 
-console.log(bills,tips,totals);
+console.log(bills, tips, totals);
 
 //BONUS
-const calcAverage = function (arr){
-	let sum = 0;
-	for(let i = 0 ; i < arr.length; i++){
-		sum += arr[i];
-	}
-	return sum/arr.length;
-}
+const calcAverage = function (arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum / arr.length;
+};
 
 console.log(calcAverage(totals));

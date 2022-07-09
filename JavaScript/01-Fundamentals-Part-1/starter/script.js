@@ -1,5 +1,3 @@
-
-
 // //=======================================================
 // //=========== V A  L U E S & V A R I A B L E S ==========
 // //=======================================================
@@ -13,7 +11,6 @@
 // //Values are the smallest unit of information on javascript
 // console.log(40+8+23-10);
 // //console.log is used to show something in the console html
-
 
 // //We make a variable Firstname with the name "Jonas"
 // let firstName = "Jonas";
@@ -40,7 +37,6 @@
 // console.log(continent);
 // console.log(population);
 
-
 // //=======================================================
 // //=========== D A T A  T Y P E S ========================
 // //=======================================================
@@ -55,7 +51,6 @@
 
 // //typeof - show the type of the variable
 // console.log(typeof fullAge);
-
 
 // //When you want to change the value of a variable
 // //first declare thevariable and then declare it without let
@@ -128,12 +123,9 @@
 // w=y=25-10-5;
 // console.log(w,y);
 
-
-
 // // =======================================================
 // // =========== CODING CHALLENGE #1 =======================
 // // =======================================================
-
 
 //// Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula: BMI = mass / height ** 2 = mass / (height * height). (mass in kg and height in meter).
 
@@ -204,11 +196,9 @@
 
 // console.log(century);
 
-
 // // =======================================================
 // // =========== CODING CHALLENGE #2 =======================
 // // =======================================================
-
 
 // /*
 // Use the BMI example from Challenge #1, and the code you already wrote, and improve it:
@@ -234,7 +224,6 @@
 // 	console.log(`John's BMI ${johnBmi} is higher than Mark's ${markBmi}!`)
 
 // }
-
 
 // // =======================================================
 // // =========== TYPE CONVERSION AND COERCION ==============
@@ -270,7 +259,6 @@
 // n= 2+3+4+'5'//95
 // n= '10'-'4'-'3'-2+'5';//15
 // console.log(n);
-
 
 // // =======================================================
 // // =========== TRUTHY AND FALSY VALUES ===================
@@ -368,11 +356,9 @@
 //   console.log('Someone else should drive...');
 // }
 
-
 // // // =======================================================
 // // // =========== CODING CHALLENGE #3 =======================
 // // // =======================================================
-
 
 // There are two gymnastics teams, Dolphins and Koalas. They compete against each other 3 times. The winner with the highest average score wins the a trophy!
 
@@ -387,7 +373,6 @@
 // TEST DATA BONUS 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
 
 // GOOD LUCK 😀
-
 
 // // const scoreDolphins = (96 + 108 + 89) / 3;
 // // const scoreKoalas = (88 + 91 + 110) / 3;
@@ -414,7 +399,6 @@
 // 	console.log("No one wins");
 // }
 
-
 // // =======================================================
 // // =========== SWITCH STATMENT ===========================
 // // =======================================================
@@ -440,7 +424,7 @@
 // 		console.log('bro free days');
 // 		break;
 // 	default:
-// 		console.log("error that's not a day");	
+// 		console.log("error that's not a day");
 // 		break;
 // }
 // //this is the same
@@ -464,8 +448,8 @@
 // // // =========== STATMENT & EXPRESIONS =====================
 // // // =======================================================
 
-// //EXPRESION produce a value
-// //STATMENT sentence that translate into actions
+//EXPRESION produce a value
+//STATMENT sentence that translate into actions
 
 // if (23 > 10) {
 //   const str = '23 is bigger';
@@ -477,7 +461,6 @@
 // //U can not write a statmente like:
 // 	// const me = 'Jonas';
 // //in that {} because is an statment
-
 
 // // =======================================================
 // // =========== TERNARY CONDITIONAL ========================
@@ -508,7 +491,6 @@
 // // // =========== CODING CHALLENGE #4 =======================
 // // // =======================================================
 
-
 // Steven wants to build a very simple tip calculator for whenever he goes eating in a resturant. In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
 
 // 1. Your task is to caluclate the tip, depending on the bill value. Create a variable called 'tip' for this. It's not allowed to use an if/else statement 😅 (If it's easier for you, you can start with an if/else statement, and then try to convert it to a ternary operator!)
@@ -520,7 +502,6 @@
 // HINT: Value X is between 50 and 300, if it's >= 50 && <= 300 😉
 
 // GOOD LUCK 😀
-
 
 // const bill = 275 ;
 // const tip = bill >= 50 && bill <= 300 ? bill*0.15: bill*0.2;
