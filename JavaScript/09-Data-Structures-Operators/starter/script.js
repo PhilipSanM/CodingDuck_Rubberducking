@@ -212,88 +212,169 @@ const rest2 = {
 // const newRestaurant = { founding: 1990, ...restaurant, founder: 'Me' };
 // console.log(newRestaurant);
 
-// //======================================================
-// //======== P A T T E R N S  &  P A R A M E T T E R S ===
-// //======================================================
+// // //======================================================
+// // //======== P A T T E R N S  &  P A R A M E T T E R S ===
+// // //======================================================
 
-//rEST PAck elements into an array
-const arr = [1, 2, 3];
+// //rEST PAck elements into an array
+// const arr = [1, 2, 3];
 
-//Rest because is in left, the rest of values
-const [a, b, ...others] = [1, 2, 3, 4, 5, 6];
-console.log(a, b, others);
-//With objects
-const [pizza, risotto, ...otherfood] = [
-  ...restaurant.mainMenu,
-  ...restaurant.starterMenu,
-];
-console.log(pizza, risotto, otherfood);
+// //Rest because is in left, the rest of values
+// const [a, b, ...others] = [1, 2, 3, 4, 5, 6];
+// console.log(a, b, others);
+// //With objects
+// const [pizza, risotto, ...otherfood] = [
+//   ...restaurant.mainMenu,
+//   ...restaurant.starterMenu,
+// ];
+// console.log(pizza, risotto, otherfood);
 
-//It also work in objects but that info is collected into a new object
+// //It also work in objects but that info is collected into a new object
 
-const { sat, ...weekdays } = restaurant.openingHours;
-console.log(sat, weekdays);
+// const { sat, ...weekdays } = restaurant.openingHours;
+// console.log(sat, weekdays);
 
-// In functions:
-//REST PARAMETERS
-const add = function (...numbers) {
-  let sum = 0;
-  for (let i = 0; i < numbers.length; i++) sum += numbers[i];
-  console.log(sum);
-  console.log(numbers);
+// // In functions:
+// //REST PARAMETERS
+// const add = function (...numbers) {
+//   let sum = 0;
+//   for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+//   console.log(sum);
+//   console.log(numbers);
+// };
+// add(3, 5, 6);
+// add(53, 12, 46, 13);
+// console.log('=-------------');
+// const x = [23, 4, 56];
+// add(...x);
+
+// restaurant.orderPizza('Mushrooms', 'milk', 'chocolate');
+// //That was for unsuse parametters
+// // //======================================================
+// // //======== L O G I C A L  O P E R A T O R S ===
+// // //======================================================
+
+// // &&  ||
+// //Short-circuiting
+// //Use ANU data type, return ANY data Type
+// //Return the firs truthy value
+// console.log(3 || 'Jonas'); //3
+// console.log('' || 'Jonas'); //jonas
+// console.log(true || 0); // true
+// console.log(undefined || null); //null
+
+// //For this, this is evaluating if that exists
+// const guest1 = restaurant.numGests ? restaurant.numGests : 10;
+// console.log(guest1);
+// //The same like
+// const guest2 = restaurant.numGests || 23;
+// console.log(guest2); // falsy value so: 23
+// console.log(`-----------AND---------`);
+
+// //ShortCircuit when the first value is falsy and return that value xd
+// console.log(0 && 'Me'); // 0
+// console.log(7 && 'Jonas'); //Jonas
+// console.log('Hello' && 23 && null && 'jonas'); // null
+
+// //Checking if that exist
+// if (restaurant.orderPizza) {
+//   restaurant.orderPizza('NANA', 'AYURA');
+// }
+// //WITH &&
+// restaurant.orderPizza && restaurant.orderPizza('NANA', 'AYURA');
+// //Or return the fisrt truly value or the last value is all is falsy
+// //And reurn the first that is falsy, or the last if all is true
+
+// // //======================================================
+// // //======== NULLLISH ===
+// // //======================================================
+// //Works like the OR operator but gives you the nullish value
+// // Nullish only work with null and undefine
+
+// const guesCorrect2 = 0 ?? 10;
+// console.log(guesCorrect2);
+
+// // //======================================================
+// // //======== Logical Assignment Operators ================
+// // //======================================================
+// // rest2.numGests = rest2.numGests || 10;
+// // rest1.numGests = rest1.numGests || 10;
+// // console.log(rest1, rest2);
+
+// //Another way to do that is:
+
+// // rest2.numGests ||= 10;
+// // rest1.numGests ||= 10;
+// // console.log(rest1, rest2);
+// //BUT IF NUM.GEST IS 0 it will be replaceable to 10
+// //For null or undefined
+// rest2.numGests ??= 10;
+// rest1.numGests ??= 10;
+// console.log(rest1, rest2);
+
+// //Replacing to anonimus
+// rest2.owner = rest2.owner && '<ANONYMUS>'; //CHANGING THE VALUE
+// rest1.owner = rest1.owner && '<ANONYMUS>'; //putts an undefine, because rest1.owner doesnt exist so, now exist with undefined
+
+// console.log(rest1, rest2);
+// // //======================================================
+// // //======== CODDING CHALLENGE #1 ========================
+// // //======================================================
+/* 
+We're building a football betting app (soccer for my American friends 😅)!
+
+Suppose we get data from a web service about a certain game (below). In this challenge we're gonna work with the data. So here are your tasks:
+
+1. Create one player array for each team (variables 'players1' and 'players2')
+2. The first player in any player array is the goalkeeper and the others are field players. For Bayern Munich (team 1) create one variable ('gk') with the goalkeeper's name, and one array ('fieldPlayers') with all the remaining 10 field players
+3. Create an array 'allPlayers' containing all players of both teams (22 players)
+4. During the game, Bayern Munich (team 1) used 3 substitute players. So create a new array ('players1Final') containing all the original team1 players plus 'Thiago', 'Coutinho' and 'Perisic'
+5. Based on the game.odds object, create one variable for each odd (called 'team1', 'draw' and 'team2')
+6. Write a function ('printGoals') that receives an arbitrary number of player names (NOT an array) and prints each of them to the console, along with the number of goals that were scored in total (number of player names passed in)
+7. The team with the lower odd is more likely to win. Print to the console which team is more likely to win, WITHOUT using an if/else statement or the ternary operator.
+
+TEST DATA FOR 6: Use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. Then, call the function again with players from game.scored
+
+GOOD LUCK 😀
+*/
+
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
 };
-add(3, 5, 6);
-add(53, 12, 46, 13);
-console.log('=-------------');
-const x = [23, 4, 56];
-add(...x);
-
-restaurant.orderPizza('Mushrooms', 'milk', 'chocolate');
-//That was for unsuse parametters
-// //======================================================
-// //======== L O G I C A L  O P E R A T O R S ===
-// //======================================================
-
-// &&  ||
-//Short-circuiting
-//Use ANU data type, return ANY data Type
-//Return the firs truthy value
-console.log(3 || 'Jonas'); //3
-console.log('' || 'Jonas'); //jonas
-console.log(true || 0); // true
-console.log(undefined || null); //null
-
-//For this, this is evaluating if that exists
-const guest1 = restaurant.numGests ? restaurant.numGests : 10;
-console.log(guest1);
-//The same like
-const guest2 = restaurant.numGests || 23;
-console.log(guest2); // falsy value so: 23
-console.log(`-----------AND---------`);
-
-//ShortCircuit when the first value is falsy and return that value xd
-console.log(0 && 'Me'); // 0
-console.log(7 && 'Jonas'); //Jonas
-console.log('Hello' && 23 && null && 'jonas'); // null
-
-//Checking if that exist
-if (restaurant.orderPizza) {
-  restaurant.orderPizza('NANA', 'AYURA');
-}
-//WITH &&
-restaurant.orderPizza && restaurant.orderPizza('NANA', 'AYURA');
-//Or return the fisrt truly value or the last value is all is falsy
-//And reurn the first that is falsy, or the last if all is true
-
-// //======================================================
-// //======== NULLLISH ===
-// //======================================================
-//Works like the OR operator but gives you the nullish value
-// Nullish only work with null and undefine
-
-const guesCorrect2 = 0 ?? 10;
-console.log(guesCorrect2);
-
-// //======================================================
-// //======== Logical Assignment Operators ================
-// //======================================================
