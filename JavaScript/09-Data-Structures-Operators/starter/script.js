@@ -378,3 +378,10 @@ const game = {
     team2: 6.5,
   },
 };
+
+const players1 = [...game.players[0]];
+const players2 = [...game.players[1]];
+
+console.log(players1);
+const allPlayers = [...game.players];
+console.log(allPlayers);
