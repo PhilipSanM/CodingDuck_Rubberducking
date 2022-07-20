@@ -69,7 +69,7 @@ const rest2 = {
 // //======================================================
 // //========= D E S T R U C T U R I N G  A R R A Y S =====
 // //======================================================
-//
+
 // //There are some ways to copy info from an array like
 // const array = [2, 43, 56];
 // const a = array[0];
@@ -187,7 +187,7 @@ const rest2 = {
 // //Join 2 arrays
 // const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 // console.log(menu);
-
+// console.log(...menu);
 // //Iterables are all but not objects
 // const string = 'pipe';
 // const letters = [...string, ' ', 's.'];
@@ -302,10 +302,10 @@ const rest2 = {
 // // console.log(rest1, rest2);
 
 // //Another way to do that is:
-
-// // rest2.numGests ||= 10;
-// // rest1.numGests ||= 10;
-// // console.log(rest1, rest2);
+// console.log(rest1, rest2);
+// rest2.numGests ||= 10;
+// rest1.numGests ||= 10;
+// console.log(rest1, rest2);
 // //BUT IF NUM.GEST IS 0 it will be replaceable to 10
 // //For null or undefined
 // rest2.numGests ??= 10;
@@ -382,6 +382,32 @@ const game = {
 const players1 = [...game.players[0]];
 const players2 = [...game.players[1]];
 
+// const [players1, players2] = game.players;
+// console.log(players1, players2);
+
 console.log(players1);
 const allPlayers = [...game.players];
 console.log(allPlayers);
+
+let [gk, ...fieldPlayers] = [...players1];
+console.log(gk, fieldPlayers);
+
+let players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+console.log(players1Final);
+
+let { team1, x: draw, team2 } = game.odds;
+console.log(team1, draw, team2);
+
+const printGoals = function (...players) {
+  console.log(players);
+  console.log(`${players.length} goals were scored`);
+};
+printGoals(...players1);
+
+// printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
+// printGoals('Davies', 'Muller');
+printGoals(...game.scored);
+
+// 7.
+team1 < team2 && console.log('Team 1 is more likely to win');
+team1 > team2 && console.log('Team 2 is more likely to win');
