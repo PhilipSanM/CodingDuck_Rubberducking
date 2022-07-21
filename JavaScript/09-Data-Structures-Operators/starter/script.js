@@ -453,22 +453,22 @@ const rest2 = {
 // // //======================================================
 
 // //ES6 enhanced Literals
-// const weekdays = ['thu', 'fri', 'sat'];
+const weekdays = ['thu', 'fri', 'sat'];
 
-// const openingHours = {
-//   [weekdays[0]]: {
-//     open: 12,
-//     close: 22,
-//   },
-//   [weekdays[1]]: {
-//     open: 11,
-//     close: 23,
-//   },
-//   [weekdays[2]]: {
-//     open: 0, // Open 24 hours
-//     close: 24,
-//   },
-// };
+const openingHours = {
+  [weekdays[0]]: {
+    open: 12,
+    close: 22,
+  },
+  [weekdays[1]]: {
+    open: 11,
+    close: 23,
+  },
+  [weekdays[2]]: {
+    open: 0, // Open 24 hours
+    close: 24,
+  },
+};
 
 // const restaurantOther = {
 //   name: 'Classico Italiano',
@@ -507,42 +507,176 @@ const rest2 = {
 // // // //======== Optional Chaining  =======================
 // // //======================================================
 
-//For checking if properties exist
-if (restaurant.openingHours && restaurant.openingHours.mon)
-  console.log(restaurant.openingHours.mon.open);
-//ES6 is more easier that
+// //For checking if properties exist
+// if (restaurant.openingHours && restaurant.openingHours.mon)
+//   console.log(restaurant.openingHours.mon.open);
+// //ES6 is more easier that
 
-console.log(restaurant.openingHours.mon?.open);
-//Only if restaurant.openingHours.mon exist, then it will gice you open
-//If not undefined will be return
-console.log(restaurant.openingHours.fri?.open);
-// console.log(restaurant.openingHours.mon.open?); This is an error, because mon dosent exist and open dosent exist too
+// console.log(restaurant.openingHours.mon?.open);
+// //Only if restaurant.openingHours.mon exist, then it will gice you open
+// //If not undefined will be return
+// console.log(restaurant.openingHours.fri?.open);
+// // console.log(restaurant.openingHours.mon.open?); This is an error, because mon dosent exist and open dosent exist too
 
-if (restaurant.openingHours && restaurant.openingHours.mon)
-  console.log(restaurant.openingHours.mon.open);
+// if (restaurant.openingHours && restaurant.openingHours.mon)
+//   console.log(restaurant.openingHours.mon.open);
 
-// Example
-const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+// // Example
+// const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 
-for (const day of days) {
-  const open = restaurant.openingHours[day]?.open ?? 'closed';
-  console.log(`On ${day}, we open at ${open}`);
+// for (const day of days) {
+//   const open = restaurant.openingHours[day]?.open ?? 'closed';
+//   console.log(`On ${day}, we open at ${open}`);
+// }
+// // 0 is a falsy value so wee use the nullish ??
+
+// // In Methods
+// //The you pass the values to test
+// console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
+// console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist');
+
+// // Arrays
+// const users = [{ name: 'Jonas', email: 'hello@jonas.io' }];
+// // const users = [];
+
+// console.log(users[0]?.name ?? 'User array empty');
+
+// //Is the same to write this
+// if (users.length > 0) console.log(users[0].name);
+// else console.log('user array empty');
+
+// //So it checks if the value of the left exist
+
+// // //======================================================
+// // //=========== Looping Objects:  ========================
+// // //======================================================
+
+// //Property NAMES
+// for (const day of Object.keys(openingHours)) {
+//   console.log(day);
+// }
+
+// const properties = Object.keys(openingHours);
+// console.log(properties);
+
+// let openStr = `We are open on ${properties.length} days: `;
+// for (const day of properties) {
+//   openStr += `${day}, `;
+// }
+// console.log(openStr);
+
+// // //Property VALUES
+// // const values = Object.values(openingHours);
+// // console.log(values);
+// // console.log(values[0].close);
+
+// //Entire Object
+// const entries = Object.entries(openingHours);
+// console.log(entries);
+// //With structuring
+// for (const [day, { open, close }] of entries) {
+//   console.log(`On ${day} we open at ${open} and close at ${close}`);
+// }
+
+// // //======================================================
+// // //========= CODING CHALLENGE #2 ========================
+// // //======================================================
+
+/* 
+Let's continue with our football betting app!
+
+1. Loop over the game.scored array and print each player name to the console, along with the goal number (Example: "Goal 1: Lewandowski")
+2. Use a loop to calculate the average odd and log it to the console (We already studied how to calculate averages, you can go check if you don't remember)
+3. Print the 3 odds to the console, but in a nice formatted way, exaclty like this:
+      Odd of victory Bayern Munich: 1.33
+      Odd of draw: 3.25
+      Odd of victory Borrussia Dortmund: 6.5
+Get the team names directly from the game object, don't hardcode them (except for "draw"). HINT: Note how the odds and the game objects have the same property names 😉
+
+BONUS: Create an object called 'scorers' which contains the names of the players who scored as properties, and the number of goals as the value. In this game, it will look like this:
+      {
+        Gnarby: 1,
+        Hummels: 1,
+        Lewandowski: 2
+      }
+
+GOOD LUCK 😀
+*/
+
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
+};
+
+console.log(Object.entries(game.scored));
+console.log(game.scored.entries());
+for (const [goal, player] of Object.entries(game.scored)) {
+  console.log(`Goal ${Number(goal) + 1}: ${player}`);
 }
-// 0 is a falsy value so wee use the nullish ??
 
-// In Methods
-//The you pass the values to test
-console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
-console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist');
+// // 1.
+// for (const [i, player] of game.scored.entries())
+//   console.log(`Goal ${i + 1}: ${player}`);
+let sum = 0;
+console.log(Object.values(game.odds));
+for (const value of Object.values(game.odds)) {
+  sum += value;
+}
+sum = sum / Object.values(game.odds).length;
 
-// Arrays
-const users = [{ name: 'Jonas', email: 'hello@jonas.io' }];
-// const users = [];
+console.log(sum);
+// 2.
+// const odds = Object.values(game.odds);
+// let average = 0;
+// for (const odd of odds) average += odd;
+// average /= odds.length;
+// console.log(average);
 
-console.log(users[0]?.name ?? 'User array empty');
+// console.log(Object.entries(game.odds));
 
-//Is the same to write this
-if (users.length > 0) console.log(users[0].name);
-else console.log('user array empty');
-
-//So it checks if the value of the left exist
+for (const [team, odd] of Object.entries(game.odds)) {
+  console.log(
+    `Odd of${game[team] ? ' victory' : ''} ${game[team] ?? 'draw'}: ${odd}`
+  );
+}
+// 3.
+// for (const [team, odd] of Object.entries(game.odds)) {
+//   const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
+//   console.log(`Odd of ${teamStr} ${odd}`);
+// }
