@@ -321,7 +321,7 @@ const rest2 = {
 // rest2.owner = rest2.owner && '<ANONYMUS>'; //CHANGING THE VALUE
 // rest1.owner = rest1.owner && '<ANONYMUS>'; //putts an undefine, because rest1.owner doesnt exist so, now exist with undefined
 
-// // console.log(rest1, rest2);
+// console.log(rest1, rest2);
 // // // //======================================================
 // // // //======== CODDING CHALLENGE #1 ========================
 // // // //======================================================
@@ -432,6 +432,7 @@ const rest2 = {
 // //Pasta
 // //  Risotto
 // // Thats a nice level of abstraccion
+// console.log(menu);
 // console.log(menu.entries());
 // //entries is an array with arrays inside
 // for (const item of menu.entries()) {
@@ -445,17 +446,17 @@ const rest2 = {
 // for (const [i, el] of menu.entries()) {
 //   console.log(`${i + 1}: ${el}`);
 // }
-// // 1: Focaccia
-// // 2: Bruschetta
-// //  3: Garlic Bread
-// // 4: Caprese Salad
-// //5: Pizza
-// //  6: Pasta
-// //  7: Risotto
+// 1: Focaccia
+// 2: Bruschetta
+//  3: Garlic Bread
+// 4: Caprese Salad
+//5: Pizza
+//  6: Pasta
+//  7: Risotto
 
-// // //======================================================
-// // // //======== Object Literals  ========================
-// // //======================================================
+// //======================================================
+// // //======== Object Literals  ========================
+// //======================================================
 
 // //ES6 enhanced Literals
 const weekdays = ['thu', 'fri', 'sat'];
@@ -784,7 +785,7 @@ const openingHours = {
 // rest.set(document.querySelector('h1'), 'header');
 // console.log(rest);
 
-// // // //======================================================
+// // //======================================================
 // // // //=========  MAPS ITERATION ============================
 // // // //======================================================
 // //Implementing a quiz, passing an array
@@ -823,6 +824,8 @@ const openingHours = {
 // console.log(question.get(answer === question.get('correct')));
 
 // // MAP----> Array
+// console.log('----');
+// console.log(question);
 // console.log(...question);
 // console.log(...hoursMap);
 // console.log(question.entries());
@@ -919,7 +922,7 @@ const openingHours = {
 
 // //Index is usfull when the slice metoth
 // //The position where the abstraccion starts
-// console.log(airplane.slice(3)); //OMEXICO
+// console.log(airplane.slice(3)); //OMEXICO Y AEROBUS
 // //We also can insert when to start and end
 // console.log(airplane.slice(3, 5)); //OM
 
@@ -928,7 +931,7 @@ const openingHours = {
 
 // console.log(airplane.slice(-2)); //US
 // console.log(airplane.slice(1, -2)); //EROMEXICO y AEROB
-
+// console.log(airplane.slice(-2,1)); //
 // const checkMiddleSeat = function (seat) {
 //   // B and E are middle seats
 //   const s = seat.slice(-1);
@@ -1099,7 +1102,7 @@ document.querySelector('button').addEventListener('click', function () {
   }
 });
 // // // //======================================================
-// // // //========= PROBLEM ====================================
+// // // //========= PROBLEM ====================================b
 // // // //======================================================
 
 // // 🔴 Delayed Departure from FAO to TXL (11h25)
