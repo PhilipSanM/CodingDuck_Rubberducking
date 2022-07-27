@@ -13,9 +13,9 @@
 
 // const interface = 'Audio';
 //
-//==============================
-//==== F U N C T I O N S =======
-//==============================
+////==============================
+////==== F U N C T I O N S =======
+////==============================
 
 // function logger(){
 // 	console.log('Hellos again');
@@ -40,7 +40,7 @@
 // console.log(appleOrangeJuice);
 
 // // ---DECLARATION AND OPERATIONS----
-// <>There are two ways to make a function
+// //{/* <>There are two ways to make a function */}
 
 // //FUNCTION DECLARATION
 // function calcPhilip(birthDay) {
@@ -78,9 +78,9 @@
 // // console.log(age4);
 // //Calling something before defining
 
-// -- ARROW FUNCTION --
+// //-- ARROW FUNCTION --
 // // <>Like an arrow that you can insert a funciton
-//function expresion
+// function expresion
 // const calcAge2 = function (birthDay) {
 // 	// body...
 // 	return 2022 - birthDay;
