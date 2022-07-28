@@ -378,3 +378,79 @@
 // //==================================================================
 // //======= CLOSURES ========================
 // //==================================================================
+
+// //A closures happens automatically
+// const secureBooking = function () {
+//   let passengerCount = 0;
+
+//   return function () {
+//     passengerCount++;
+//     console.log(`${passengerCount} passengers`);
+//   };
+// };
+
+// const booker = secureBooking();
+// //So now booker is a function
+// //secureBooking has gone away, for now
+
+// booker();
+// booker();
+// booker();
+
+// const seconBooker = secureBooking();
+// seconBooker();
+// booker(0);
+
+// // CLOSURE is the conexion betwen the variable passengerCount because was created
+// // in the function, the variable enviroment was gone, but thanks to the closure, that variable of the function exists
+
+// //The closure has priority over the scope chain
+
+// // THE CLOSER IS THE CLOSED-OVER VARIABLE NEVIORMENT OF THE EXECUTION CONTEXT IN WICH A FUNCTION WAS CREATED, EVEN AFTER THAT EXECUTION CONTEXT IS GONE
+
+// // A CLOSURE GIVES A FUNCTION ACCESS TO ALL THE VARIABLES OF ITS PARENT FUNCTION,
+// // EVEN AFTER THAT PARENT FUNCTION HAS RETURNED. THE FUNCTION KEEPS A REFERENCE TO ITS OUTER SCOPE
+// // WICH PRESERVES THE SCOPE CHAIN THROUGHOUT TIME.
+
+// console.dir(booker);
+let f = 0;
+const g = function () {
+  const a = 23;
+  f = function () {
+    console.log(a * 2);
+  };
+};
+
+g();
+f(); //46
+f(); //46
+//f variable was defined in the global, but it was redifined in the function
+// even that g() has finished.
+
+const h = function () {
+  const b = 77;
+  f = function () {
+    console.log(b * 2);
+  };
+};
+h();
+f(); //154
+// it was redifined
+//but now the closure is b not a
+console.dir(f);
+
+//TIMER
+
+const boardPassengers = function (n, wait) {
+  const perGroup = n / 3;
+
+  setTimeout(function () {
+    console.log(`We are now boarding all ${n} passengers`);
+    console.log(`There are 3 groups, each with ${perGroup} passengers`);
+  }, wait * 1000);
+
+  console.log(`Will start boarding in ${wait} seconds`);
+};
+
+const perGroup = 1000;
+boardPassengers(180, 3);
