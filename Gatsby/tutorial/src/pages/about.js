@@ -1,7 +1,7 @@
 import React from "react"
-
+import Layout from "../components/Layout"
 const about = () => {
-  return <div>Hellor from about page</div>
+  return <Layout>Hellor from about page</Layout>
 }
 
 export default about
