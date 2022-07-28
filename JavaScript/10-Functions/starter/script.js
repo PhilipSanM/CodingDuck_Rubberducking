@@ -244,9 +244,9 @@
 // const taxVat = addTaxes(0.23);
 // console.log(taxVat(23));
 
-// // // //==================================================================
-// // // //===================== CODING CHALLENGE #1 ========================
-// // // //==================================================================
+// //==================================================================
+// //===================== CODING CHALLENGE #1 ========================
+// //==================================================================
 
 // /*
 // Let's build a simple poll app!
@@ -350,107 +350,128 @@
 // // [5, 2, 3]
 // // [1, 5, 3, 9, 6, 1]
 
-// //==================================================================
-// //======= INMEDIATELY Invoked function EXPRESSIONS========================
-// //==================================================================
-// IIFE
+// // //==================================================================
+// // //======= INMEDIATELY Invoked function EXPRESSIONS========================
+// // //==================================================================
+// // IIFE
 
-//A function that desappeared once it is called
+// //A function that desappeared once it is called
 
-(function () {
-  console.log('This function will be deleted');
-})();
-// You can call it when you put the () in the function to think JS that is an expresion
-//and you call it with the () at the end
+// (function () {
+//   console.log('This function will be deleted');
+// })();
+// // You can call it when you put the () in the function to think JS that is an expresion
+// //and you call it with the () at the end
 
-//Arrow IIFE
-(() => console.log('This function will be deleted'))();
+// //Arrow IIFE
+// (() => console.log('This function will be deleted'))();
 
-{
-  const isPrivate = 23;
-  var notPrivate = 46;
-}
-// console.log(isPrivate);
-// console.log(notPrivate);
+// {
+//   const isPrivate = 23;
+//   var notPrivate = 46;
+// }
+// // console.log(isPrivate);
+// // console.log(notPrivate);
 
-//Is like a block
+// //Is like a block
 
-// //==================================================================
-// //======= CLOSURES ========================
-// //==================================================================
+// // //==================================================================
+// // //======= CLOSURES ========================
+// // //==================================================================
 
-// //A closures happens automatically
-// const secureBooking = function () {
-//   let passengerCount = 0;
+// // //A closures happens automatically
+// // const secureBooking = function () {
+// //   let passengerCount = 0;
 
-//   return function () {
-//     passengerCount++;
-//     console.log(`${passengerCount} passengers`);
+// //   return function () {
+// //     passengerCount++;
+// //     console.log(`${passengerCount} passengers`);
+// //   };
+// // };
+
+// // const booker = secureBooking();
+// // //So now booker is a function
+// // //secureBooking has gone away, for now
+
+// // booker();
+// // booker();
+// // booker();
+
+// // const seconBooker = secureBooking();
+// // seconBooker();
+// // booker(0);
+
+// // // CLOSURE is the conexion betwen the variable passengerCount because was created
+// // // in the function, the variable enviroment was gone, but thanks to the closure, that variable of the function exists
+
+// // //The closure has priority over the scope chain
+
+// // // THE CLOSER IS THE CLOSED-OVER VARIABLE NEVIORMENT OF THE EXECUTION CONTEXT IN WICH A FUNCTION WAS CREATED, EVEN AFTER THAT EXECUTION CONTEXT IS GONE
+
+// // // A CLOSURE GIVES A FUNCTION ACCESS TO ALL THE VARIABLES OF ITS PARENT FUNCTION,
+// // // EVEN AFTER THAT PARENT FUNCTION HAS RETURNED. THE FUNCTION KEEPS A REFERENCE TO ITS OUTER SCOPE
+// // // WICH PRESERVES THE SCOPE CHAIN THROUGHOUT TIME.
+
+// // console.dir(booker);
+// let f = 0;
+// const g = function () {
+//   const a = 23;
+//   f = function () {
+//     console.log(a * 2);
 //   };
 // };
 
-// const booker = secureBooking();
-// //So now booker is a function
-// //secureBooking has gone away, for now
+// g();
+// f(); //46
+// f(); //46
+// //f variable was defined in the global, but it was redifined in the function
+// // even that g() has finished.
 
-// booker();
-// booker();
-// booker();
+// const h = function () {
+//   const b = 77;
+//   f = function () {
+//     console.log(b * 2);
+//   };
+// };
+// h();
+// f(); //154
+// // it was redifined
+// //but now the closure is b not a
+// console.dir(f);
 
-// const seconBooker = secureBooking();
-// seconBooker();
-// booker(0);
+// //TIMER
 
-// // CLOSURE is the conexion betwen the variable passengerCount because was created
-// // in the function, the variable enviroment was gone, but thanks to the closure, that variable of the function exists
+// const boardPassengers = function (n, wait) {
+//   const perGroup = n / 3;
 
-// //The closure has priority over the scope chain
+//   setTimeout(function () {
+//     console.log(`We are now boarding all ${n} passengers`);
+//     console.log(`There are 3 groups, each with ${perGroup} passengers`);
+//   }, wait * 1000);
 
-// // THE CLOSER IS THE CLOSED-OVER VARIABLE NEVIORMENT OF THE EXECUTION CONTEXT IN WICH A FUNCTION WAS CREATED, EVEN AFTER THAT EXECUTION CONTEXT IS GONE
+//   console.log(`Will start boarding in ${wait} seconds`);
+// };
 
-// // A CLOSURE GIVES A FUNCTION ACCESS TO ALL THE VARIABLES OF ITS PARENT FUNCTION,
-// // EVEN AFTER THAT PARENT FUNCTION HAS RETURNED. THE FUNCTION KEEPS A REFERENCE TO ITS OUTER SCOPE
-// // WICH PRESERVES THE SCOPE CHAIN THROUGHOUT TIME.
+// const perGroup = 1000;
+// boardPassengers(180, 3);
 
-// console.dir(booker);
-let f = 0;
-const g = function () {
-  const a = 23;
-  f = function () {
-    console.log(a * 2);
-  };
-};
+// //==================================================================
+// //===================== CODING CHALLENGE #2 ========================
+// //==================================================================
 
-g();
-f(); //46
-f(); //46
-//f variable was defined in the global, but it was redifined in the function
-// even that g() has finished.
+/* 
+This is more of a thinking challenge than a coding challenge 🤓
 
-const h = function () {
-  const b = 77;
-  f = function () {
-    console.log(b * 2);
-  };
-};
-h();
-f(); //154
-// it was redifined
-//but now the closure is b not a
-console.dir(f);
+Take the IIFE below and at the end of the function, attach an event listener that changes the color of the selected h1 element ('header') to blue, each time the BODY element is clicked. Do NOT select the h1 element again!
 
-//TIMER
+And now explain to YOURSELF (or someone around you) WHY this worked! Take all the time you need. Think about WHEN exactly the callback function is executed, and what that means for the variables involved in this example.
 
-const boardPassengers = function (n, wait) {
-  const perGroup = n / 3;
-
-  setTimeout(function () {
-    console.log(`We are now boarding all ${n} passengers`);
-    console.log(`There are 3 groups, each with ${perGroup} passengers`);
-  }, wait * 1000);
-
-  console.log(`Will start boarding in ${wait} seconds`);
-};
-
-const perGroup = 1000;
-boardPassengers(180, 3);
+GOOD LUCK 😀
+*/
+(function () {
+  const header = document.querySelector('h1');
+  header.style.color = 'red';
+  document.querySelector('body').addEventListener('click', function () {
+    header.style.color = 'blue';
+  });
+})();
