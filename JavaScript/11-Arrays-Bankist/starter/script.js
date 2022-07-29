@@ -74,3 +74,55 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+
+// ==================================================================
+// ====================== SIMPLE ARRAY METHODS ======================
+// ==================================================================
+
+//Methods are functions that we can call on objects.
+
+// SLICE
+let arr = [...'abcde']; // ['a', 'b', 'c', 'd', 'e' ];
+// Slice, take a part of an array
+console.log(arr.slice(2)); // ['c', 'd', 'e']
+// index at index 2
+console.log(...arr.slice(2)); // c d e
+console.log(arr.slice(2, 4)); // ['c', 'd']
+console.log(arr.slice(-2)); // ['d', 'e']
+console.log(arr.slice(-1)); // ['e']
+console.log(arr.slice(1, -2)); // ['b', 'c']
+console.log(arr.slice(1, -2)); // ['b', 'c']
+// shadow copy remember
+console.log([...arr]); // ['a', 'b', 'c', 'd', 'e']
+
+//SPLICE
+//The diference that it mutate thats array look then with the originall
+console.log(arr.splice(2)); // ['c', 'd', 'e']
+console.log(arr); // ['a', 'b']
+//splice delete the part extracted
+arr = [...'abcde']; // ['a', 'b', 'c', 'd', 'e' ];
+// console.log(arr.splice(-1)); // ['e']
+arr.splice(-1); // ['e']
+console.log(arr); // ['a', 'b', 'c', 'd']
+arr = ['a', 'b', 'c', 'd', 'e']; // [...'abcde'];
+arr.splice(1, 2); // takes 'b' and 'c'
+console.log(arr); // ['a', 'd', 'e']
+
+// REVERSE
+//This also mutate the array and make it reverse.
+arr = [...'abcde'];
+let arr2 = [...'jihgjf'];
+console.log(arr2.reverse()); //['f', 'j', 'g', 'h', 'i', 'j']
+console.log(arr2); // ['f', 'j', 'g', 'h', 'i', 'j']
+
+// CONCAT
+//This doesn't mutate the original arry
+const letters = arr.concat(arr2);
+console.log(letters); // ['a', 'b', 'c', 'd', 'e', 'f', 'j', 'g', 'h', 'i', 'j']
+console.log([...arr, ...arr2]); // ['a', 'b', 'c', 'd', 'e', 'f', 'j', 'g', 'h', 'i', 'j']
+
+// JOIN
+//This doesn't mutate the array
+//Joining all the elements of the array but with the '-'
+console.log(letters.join('-')); // a-b-c-d-e-f-j-g-h-i-j
+console.log(letters.join(' - ')); // a - b - c - d - e - f - j - g - h - i - j
