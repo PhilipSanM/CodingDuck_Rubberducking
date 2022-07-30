@@ -241,3 +241,29 @@ const inputClosePin = document.querySelector('.form__input--pin');
 // // ==================================================================
 // // =================== BANKIST APP ==================================
 // // ==================================================================
+
+//Display all the movments
+const displayMovments = function (movements) {
+  // we can clean that part of the html with
+  // inner gives you the html of that class, but that will be clean ''
+  containerMovements.innerHTML = '';
+  //.textContent = 0;
+  movements.forEach(function (mov, i) {
+    const type = mov > 0 ? 'deposit' : 'withdrawal';
+    //Thats just creating an html array with that mehtod
+    const html = `
+    <div class="movements__row">
+      <div class="movements__type movements__type--${type}">${
+      i + 1
+    } ${type}</div>
+      <div class="movements__value">${mov}</div>
+    </div>
+    `;
+    // Now that we make the html we will insert the html with a method
+    containerMovements.insertAdjacentHTML('afterbegin', html);
+    // The fisrt parametter is the position wehre to atach
+    // All the variables are in the top of the JS
+  });
+};
+
+displayMovments(account1.movements);
