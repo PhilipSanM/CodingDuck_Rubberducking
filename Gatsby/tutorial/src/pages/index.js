@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 import Layout from "../components/Layout"
 //My mistake the name of that
 import { page, text } from "../examples/home.module.css"
+import { ExampleButton } from "../examples/button"
+
 export default function Home() {
   return (
     <Layout>
@@ -11,6 +13,7 @@ export default function Home() {
       <h1 style={{ color: "blue", textTransform: "capitalize" }}>
         Hello world! :), shit Home page
       </h1>
+      <ExampleButton>Click on me</ExampleButton>
       <Link to="/about"> About </Link>
       <div>
         <a href="/about">reg Link</a>
