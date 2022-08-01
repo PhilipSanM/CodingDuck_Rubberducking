@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/Layout"
 //My mistake the name of that
+import { page, text } from "../examples/home.module.css"
 export default function Home() {
   return (
     <Layout>
@@ -20,8 +21,9 @@ export default function Home() {
 
       <h1>Hello again</h1>
       {/* Lets apply the class so: */}
-      <div className="home-heading">
+      <div className={page}>
         <h1>Hello, but this have a class</h1>
+        <p className={text}>lorem lorem</p>
       </div>
     </Layout>
   )
