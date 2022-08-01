@@ -5,13 +5,23 @@ import Layout from "../components/Layout"
 export default function Home() {
   return (
     <Layout>
-      <h1>Hello world! :), shit Home page</h1>
+      {/* Doble {}because is JS nOT css */}
+      {/* So now You can add color like JS  */}
+      <h1 style={{ color: "blue", textTransform: "capitalize" }}>
+        Hello world! :), shit Home page
+      </h1>
       <Link to="/about"> About </Link>
       <div>
         <a href="/about">reg Link</a>
       </div>
       <div>
         <Link to="/company/history">history</Link>
+      </div>
+
+      <h1>Hello again</h1>
+      {/* Lets apply the class so: */}
+      <div className="home-heading">
+        <h1>Hello, but this have a class</h1>
       </div>
     </Layout>
   )
