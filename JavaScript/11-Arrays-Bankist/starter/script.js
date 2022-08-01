@@ -527,25 +527,56 @@ calcDisplaySummary(account1.movements);
 //   .reduce((acc, move) => acc + move, 0);
 // console.log(totalDepositUSD);
 
-// ==================================================================
-// =================== CODING CHALLENGE #3 ==========================
-// ==================================================================
+// // ==================================================================
+// // =================== CODING CHALLENGE #3 ==========================
+// // ==================================================================
 
-/* 
-Rewrite the 'calcAverageHumanAge' function from the previous challenge, but this time as an arrow function, and using chaining!
+// /*
+// Rewrite the 'calcAverageHumanAge' function from the previous challenge, but this time as an arrow function, and using chaining!
 
-TEST DATA 1: [5, 2, 4, 1, 15, 8, 3]
-TEST DATA 2: [16, 6, 10, 5, 6, 1, 4]
+// TEST DATA 1: [5, 2, 4, 1, 15, 8, 3]
+// TEST DATA 2: [16, 6, 10, 5, 6, 1, 4]
 
-GOOD LUCK 😀
-*/
+// GOOD LUCK 😀
+// */
 
-const calcAverageHumanAge = ages =>
-  ages
-    .map(dogAge => {
-      return dogAge <= 2 ? 2 * dogAge : 16 + dogAge * 4;
-    })
-    .filter(age => age > 18)
-    .reduce((acc, curr, i, array) => acc + curr / array.length, 0);
+// const calcAverageHumanAge = ages =>
+//   ages
+//     .map(dogAge => {
+//       return dogAge <= 2 ? 2 * dogAge : 16 + dogAge * 4;
+//     })
+//     .filter(age => age > 18)
+//     .reduce((acc, curr, i, array) => acc + curr / array.length, 0);
 
-console.log(calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]));
+// console.log(calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]));
+
+// // ==================================================================
+// // =================== FIND METHOD ==================================
+// // ==================================================================
+// accepts a call bak function that loops over the array an return
+// only return the first element wich the condition become true
+const firstWithfrawal = movements.find(mov => mov < 0);
+
+console.log(movements);
+console.log(firstWithfrawal);
+//This only return the firstone.
+
+//Working with array objects
+console.log(accounts);
+
+const account = accounts.find(acc => acc.owner === 'Jessica Davis');
+console.log(account); // this is usefull because it retuns you the account
+
+// account.owner = 'sfa';
+// // remember that this change the originall
+// console.log(account);
+// console.log(accounts);
+
+const functionFind = function (accounts) {
+  for (const account of accounts) {
+    if (account.owner === 'Jessica Davis') return account;
+  }
+};
+
+const accountJ = functionFind(accounts);
+console.log(accountJ);
