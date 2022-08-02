@@ -3,7 +3,7 @@
 
 <div align = "middle" id = "Header">
   <h3><strong>
-    This repository is contains my ninja way of this world of programmers. 🥷
+    This repository is my ninja way of this world of programmers. 🥷
   </h3></strong>
   <img src="https://user-images.githubusercontent.com/99928036/182273209-bf79a537-9384-49e7-aa51-64061f52a01a.gif" alt="Mr.Roboto" width="150"/>
 </div>
