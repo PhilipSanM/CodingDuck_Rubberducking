@@ -3,7 +3,8 @@ import Navbar from "./Navbar"
 import Footer from "./Footer"
 
 // CSS
-import "./layout.css"
+import "normalize.css"
+import "../assets/CSS/main.css"
 
 const Layout = ({ children }) => {
   return (
