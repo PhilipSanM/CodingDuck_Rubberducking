@@ -1,0 +1,24 @@
+/* All the traditiona CSS */
+/* In gatsby V3 all the layout is apply as global */
+/* BUT NOTE: This only happend in development  if a page don't have the layout*/
+/* The style will not be applied */
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  /* background: red; */
+}
+
+h1 {
+  color: rgb(153, 95, 51);
+  text-align: center;
+}
+/* Remember to avoid collisions with the name of the varaibles */
+.about-heading {
+  color: rgb(14, 17, 17);
+  text-align: center;
+}
+.home-heading {
+  color: green;
+  text-align: center;
+}
+/* Sometimes you have to restart the develop with commando */
+/* npm start */
