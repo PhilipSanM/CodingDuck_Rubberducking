@@ -266,7 +266,6 @@ const displayMovments = function (movements) {
   });
 };
 
-displayMovments(account1.movements);
 //Here we just want the value not something being returned
 const createUserNames = function (accounts) {
   accounts.forEach(function (account) {
@@ -284,22 +283,22 @@ const calcDisplayBalance = function (movements) {
   labelBalance.textContent = `${balance}€`;
 };
 
-calcDisplayBalance(account1.movements);
+// const account = accounts.find(acc => acc.owner === 'Jessica Davis');
 
-const calcDisplaySummary = function (movements) {
-  const incomes = movements
+const calcDisplaySummary = function (account) {
+  const incomes = account.movements
     .filter(mov => mov > 0)
     .reduce((acc, move) => acc + move, 0);
   labelSumIn.textContent = `${incomes}€`;
 
-  const out = movements
+  const out = account.movements
     .filter(mov => mov < 0)
     .reduce((acc, move) => acc + move, 0);
   labelSumOut.textContent = `${Math.abs(out)}€`;
 
-  const interest = movements
+  const interest = account.movements
     .filter(mov => mov > 0)
-    .map(deposit => (deposit * 1.2) / 100)
+    .map(deposit => (deposit * account.interestRate) / 100)
     .filter((interest, i, arr) => {
       return interest >= 1;
     })
@@ -307,7 +306,39 @@ const calcDisplaySummary = function (movements) {
 
   labelSumInterest.textContent = `${Math.abs(interest)}€`;
 };
-calcDisplaySummary(account1.movements);
+
+//Event handler
+let currentAccount;
+
+//Login BOTTON
+btnLogin.addEventListener('click', function (event) {
+  // Prevent form from submitting
+  event.preventDefault();
+
+  currentAccount = accounts.find(
+    acc => acc.username === inputLoginUsername.value
+  );
+  // console.log(currentAccount);
+  //Pin
+  if (Number(inputLoginPin.value) === currentAccount?.pin) {
+    console.log('LOGIN');
+    // DISPLAY UI AND WELCOME MESSAGE
+    labelWelcome.textContent = `Welcome back, ${
+      currentAccount.owner.split(' ')[0]
+    }`;
+    containerApp.style.opacity = 100;
+    // Clear input fields
+    inputLoginPin.value = inputLoginUsername.value = '';
+    inputLoginPin.blur();
+
+    // DISPLAY MOVEMENTS
+    displayMovments(currentAccount.movements);
+    // DISPLAY BALANCE
+    calcDisplayBalance(currentAccount.movements);
+    // DISPLAY SUMMARY
+    calcDisplaySummary(currentAccount);
+  }
+});
 
 // // ==================================================================
 // // =================== CODING CHALLENGE #1 ==========================
@@ -550,33 +581,33 @@ calcDisplaySummary(account1.movements);
 
 // console.log(calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]));
 
-// // ==================================================================
-// // =================== FIND METHOD ==================================
-// // ==================================================================
-// accepts a call bak function that loops over the array an return
-// only return the first element wich the condition become true
-const firstWithfrawal = movements.find(mov => mov < 0);
+// // // ==================================================================
+// // // =================== FIND METHOD ==================================
+// // // ==================================================================
+// // accepts a call bak function that loops over the array an return
+// // only return the first element wich the condition become true
+// const firstWithfrawal = movements.find(mov => mov < 0);
 
-console.log(movements);
-console.log(firstWithfrawal);
-//This only return the firstone.
+// console.log(movements);
+// console.log(firstWithfrawal);
+// //This only return the firstone.
 
-//Working with array objects
-console.log(accounts);
-
-const account = accounts.find(acc => acc.owner === 'Jessica Davis');
-console.log(account); // this is usefull because it retuns you the account
-
-// account.owner = 'sfa';
-// // remember that this change the originall
-// console.log(account);
+// //Working with array objects
 // console.log(accounts);
 
-const functionFind = function (accounts) {
-  for (const account of accounts) {
-    if (account.owner === 'Jessica Davis') return account;
-  }
-};
+// const account = accounts.find(acc => acc.owner === 'Jessica Davis');
+// console.log(account); // this is usefull because it retuns you the account
 
-const accountJ = functionFind(accounts);
-console.log(accountJ);
+// // account.owner = 'sfa';
+// // // remember that this change the originall
+// // console.log(account);
+// // console.log(accounts);
+
+// const functionFind = function (accounts) {
+//   for (const account of accounts) {
+//     if (account.owner === 'Jessica Davis') return account;
+//   }
+// };
+
+// const accountJ = functionFind(accounts);
+// console.log(accountJ);
