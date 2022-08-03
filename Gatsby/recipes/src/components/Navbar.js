@@ -8,13 +8,16 @@ const navar = () => {
           <Link to="/">home</Link>
         </li>
         <li>
-          <Link to="/home">about</Link>
+          <Link to="/about">about</Link>
         </li>
         <li>
-          <Link to="/recipes">recipes</Link>
+          <Link to="/contact">Contact</Link>
         </li>
         <li>
           <Link to="/tags">tags</Link>
+        </li>
+        <li>
+          <Link to="/recipes">recipes</Link>
         </li>
       </ul>
     </div>
