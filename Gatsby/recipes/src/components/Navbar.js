@@ -1,8 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
-const navar = () => {
+import { FiAlignJustify } from "react-icons/fi"
+const Navbar = () => {
   return (
-    <div>
+    <nav>
+      <FiAlignJustify />
       <ul>
         <li>
           <Link to="/">home</Link>
@@ -20,8 +22,8 @@ const navar = () => {
           <Link to="/recipes">recipes</Link>
         </li>
       </ul>
-    </div>
+    </nav>
   )
 }
 
-export default navar
+export default Navbar
