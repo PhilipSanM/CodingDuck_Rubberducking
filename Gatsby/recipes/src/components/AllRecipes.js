@@ -31,11 +31,10 @@ const AllRecipes = () => {
   // } = useStaticQuery(query)
   // console.log(recipes)
   return (
-    <div>
-      All Recipes
+    <section className="recipes-container">
       <TagsList recipes={recipes} />
       <RecipesList recipes={recipes} />
-    </div>
+    </section>
   )
 }
 
