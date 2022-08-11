@@ -6,6 +6,7 @@ import Seo from "../components/Seo"
 const About = () => {
   return (
     <>
+      <Seo title="About" />
       <h2>about page</h2>
     </>
   )
