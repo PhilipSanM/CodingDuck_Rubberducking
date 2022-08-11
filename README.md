@@ -41,9 +41,18 @@
 
 
 ## 🧑‍💻Cool WebSites🤖🧑‍💻:
+- <a href="https://admirable-llama-df5a73.netlify.app/">Recipes</a>
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/60f4bb56-65f3-4bd8-99da-29cfe98f5714/deploy-status)](https://app.netlify.com/sites/admirable-llama-df5a73/deploys)
 
 <img align="middle" src="https://user-images.githubusercontent.com/99928036/183769312-8c85feea-c1f0-4628-87ea-039f850c9a42.png" alt="Rubber" width="500"/>
+
+- <a href="https://gorgeous-buttercream-0d1272.netlify.app/">PortfolioTest</a>
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a9ff8985-1fec-4107-affc-a1dc63e29f4d/deploy-status)](https://app.netlify.com/sites/gorgeous-buttercream-0d1272/deploys)
+
+<img align="middle" src="https://user-images.githubusercontent.com/99928036/184246762-79837f48-df9b-4a16-9e4f-17088bc1a484.png" alt="Rubber" width="500"/>
+
 
 
 
