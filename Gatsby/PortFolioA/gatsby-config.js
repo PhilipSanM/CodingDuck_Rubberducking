@@ -6,7 +6,6 @@
 
 module.exports = {
   /* Your site config here */
-
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
@@ -25,7 +24,6 @@ module.exports = {
         apiURL: `http://localhost:1337`,
         queryLimit: 1000, // Defaults to 100
         collectionTypes: [`job`],
-        // singleTypes: [`home-page`, `contact`],
       },
     },
   ],
