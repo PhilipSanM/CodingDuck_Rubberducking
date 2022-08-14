@@ -27,7 +27,7 @@ Variables
   /* darkest grey - used for headings */
   --clr-grey-1: hsl(65, 100%, 50%);
   --clr-grey-3: hsl(0, 0%, 100%);
-  --clr-grey-4: hsl(82, 20%, 71%);
+  --clr-grey-4: hsl(80, 5%, 49%);
   /* grey used for paragraphs */
   --clr-grey-5: hsl(0, 35%, 91%);
   --clr-grey-8: hsl(210, 30%, 26%);
@@ -920,7 +920,7 @@ Contact Page
   padding: 5rem 0;
 }
 .contact-form {
-  background: var(--clr-white);
+  background: var(--clr-grey-8);
   border-radius: var(--radius);
   text-align: center;
   box-shadow: var(--light-shadow);
@@ -933,7 +933,7 @@ Contact Page
 }
 .contact-form h3 {
   padding-top: 1.25rem;
-  color: var(--clr-grey-5);
+  color: var(--clr-grey-10);
 }
 .form-group {
   padding: 1rem 1.5rem;
@@ -944,14 +944,14 @@ Contact Page
   padding: 0.75rem 1rem;
   border: none;
   margin-bottom: 1.25rem;
-  background: var(--clr-grey-10);
+  background: var(--clr-primary-1);
   border-radius: var(--radius);
   text-transform: uppercase;
   letter-spacing: var(--spacing);
 }
 .form-control::placeholder {
   font-family: var(--ff-primary);
-  color: var(--clr-grey-1);
+  color: var(--clr-grey-10);
   text-transform: uppercase;
   letter-spacing: var(--spacing);
 }
