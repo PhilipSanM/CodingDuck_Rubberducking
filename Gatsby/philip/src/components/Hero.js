@@ -11,7 +11,7 @@ const Hero = () => {
         <article className="hero-info">
           <div>
             <div className="underline"> </div>
-            <h1>I'm Philip</h1>
+            <h1>PhilipSanM</h1>
             <h4>AI engineering student</h4>
             <Link to="/contact" className="btn">
               Contact me
@@ -25,6 +25,9 @@ const Hero = () => {
                 )
               })}
             </div>
+            <Link to="/" className="btn">
+              Check my Resume
+            </Link>
           </div>
         </article>
         <StaticImage

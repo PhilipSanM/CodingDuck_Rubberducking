@@ -5,6 +5,7 @@ import {
   FaYoutube,
   FaInstagram,
   FaTwitterSquare,
+  FaGithub,
 } from "react-icons/fa"
 
 const data = [
@@ -15,8 +16,8 @@ const data = [
   },
   {
     id: 2,
-    icon: <FaFacebookSquare className="social-icon"></FaFacebookSquare>,
-    url: "https://www.facebook.com/profile.php?id=100081291668294",
+    icon: <FaGithub className="social-icon"></FaGithub>,
+    url: "https://github.com/PhilipSanM",
   },
   {
     id: 3,
@@ -32,6 +33,11 @@ const data = [
     id: 5,
     icon: <FaTwitterSquare className="social-icon"></FaTwitterSquare>,
     url: "https://twitter.com/PhilipSanM_",
+  },
+  {
+    id: 6,
+    icon: <FaFacebookSquare className="social-icon"></FaFacebookSquare>,
+    url: "https://www.facebook.com/profile.php?id=100081291668294",
   },
 ]
 

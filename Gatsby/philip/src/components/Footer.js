@@ -14,7 +14,14 @@ const Footer = () => {
           })}
         </div>
         <h4>copyright &copy; {new Date().getFullYear()}</h4>
-        <span>WebDev</span> all right reserved
+        <h4>
+          Powered by <a href="https://www.gatsbyjs.com/">Gatsby</a> Made with ❤
+          by
+          <a href="https://www.gatsbyjs.com/https://github.com/PhilipSanM">
+            {" "}
+            PhilipSanM
+          </a>
+        </h4>
       </div>
     </footer>
   )

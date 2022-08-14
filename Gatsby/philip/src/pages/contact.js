@@ -1,6 +1,12 @@
 import React from "react"
 import Seo from "../components/Seo"
-const contact = () => {
+import { graphql } from "gatsby"
+import Projects from "../components/Projects"
+const contact = ({ data }) => {
+  const {
+    allStrapiProject: { nodes: projects },
+  } = data
+
   return (
     <>
       <Seo title="Contact" />
@@ -35,8 +41,36 @@ const contact = () => {
           </form>
         </article>
       </section>
+      <Projects title="check it out!" showLink projects={projects} />
     </>
   )
 }
+
+export const query = graphql`
+  query {
+    allStrapiProject(filter: { featured: { eq: true } }) {
+      nodes {
+        description
+        featured
+        github
+        id
+        slug
+        title
+        url
+        stack {
+          id
+          title
+        }
+        image {
+          localFile {
+            childImageSharp {
+              gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 export default contact

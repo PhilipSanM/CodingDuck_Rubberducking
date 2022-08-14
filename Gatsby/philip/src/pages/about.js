@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Title from "../components/Title"
 import Seo from "../components/Seo"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Gif from "../assets/images/about.gif"
 const About = ({ data }) => {
   const {
     strapiAbout: { title, image, info, stack },
@@ -12,11 +13,7 @@ const About = ({ data }) => {
       <Seo title="About" />
       <section className="about-page">
         <div className="section-center about-center">
-          <GatsbyImage
-            image={getImage(image.localFile)}
-            className="about-img-svg"
-            alt={title}
-          />
+          <image src={Gif} alt="Felipe Sanchez" />
 
           <article className="about-text">
             <Title title={title} />
