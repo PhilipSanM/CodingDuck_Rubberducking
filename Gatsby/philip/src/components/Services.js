@@ -7,11 +7,13 @@ const Associations = () => {
       <Title title="Associations" />
       <div className="section-center services-center">
         {associations.map(associations => {
-          const { id, icon, title, text } = associations
+          const { id, icon, title, text, link } = associations
           return (
             <article key={id} className="service">
               {icon}
-              <h4>{title}</h4>
+              <a href={link}>
+                <h4>{title}</h4>
+              </a>
               <div className="underline"></div>
               <p>{text}</p>
             </article>
