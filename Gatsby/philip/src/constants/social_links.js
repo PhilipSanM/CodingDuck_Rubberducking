@@ -21,12 +21,12 @@ const data = [
   {
     id: 3,
     icon: <FaYoutube className="social-icon"></FaYoutube>,
-    url: "https://www.twitter.com",
+    url: "https://www.youtube.com/channel/UCMRk28DnkUTdiNdVc-ZuK_Q",
   },
   {
     id: 4,
     icon: <FaInstagram className="social-icon"></FaInstagram>,
-    url: "https://www.twitter.com",
+    url: "https://www.instagram.com/philipsanm/",
   },
   {
     id: 5,

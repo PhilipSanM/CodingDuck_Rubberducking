@@ -1,13 +1,13 @@
 import React from "react"
 import Title from "./Title"
-import services from "../constants/services"
-const Services = () => {
+import associations from "../constants/services"
+const Associations = () => {
   return (
     <section className="section bg-grey">
-      <Title title="services" />
+      <Title title="Associations" />
       <div className="section-center services-center">
-        {services.map(services => {
-          const { id, icon, title, text } = services
+        {associations.map(associations => {
+          const { id, icon, title, text } = associations
           return (
             <article key={id} className="service">
               {icon}
@@ -22,4 +22,4 @@ const Services = () => {
   )
 }
 
-export default Services
+export default Associations
