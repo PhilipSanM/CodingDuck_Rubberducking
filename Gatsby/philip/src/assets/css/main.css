@@ -13,30 +13,31 @@ Variables
 
 :root {
   /* dark shades of primary color*/
-  --clr-primary-1: hsl(184, 91%, 17%);
-  --clr-primary-2: hsl(185, 84%, 25%);
-  --clr-primary-3: hsl(185, 81%, 29%);
-  --clr-primary-4: hsl(184, 77%, 34%);
-  --clr-primary-5: #2caeba;
+  --clr-primary-1: hsl(0, 0%, 100%);
+  --clr-primary-2: hsl(0, 0%, 65%);
+  --clr-primary-3: hsl(186, 24%, 85%);
+  --clr-primary-4: hsl(180, 69%, 66%);
+  --clr-primary-5: #79eeb5;
   /* lighter shades of primary color */
-  --clr-primary-6: hsl(185, 57%, 50%);
-  --clr-primary-7: hsl(184, 65%, 59%);
-  --clr-primary-8: hsl(184, 80%, 74%);
-  --clr-primary-9: hsl(185, 94%, 87%);
-  --clr-primary-10: hsl(186, 100%, 94%);
+  --clr-primary-6: hsl(186, 53%, 12%);
+  --clr-primary-7: hsl(233, 62%, 11%);
+  --clr-primary-8: hsl(228, 31%, 22%);
+  --clr-primary-9: hsl(240, 20%, 22%);
+  --clr-primary-10: hsl(237, 49%, 8%);
   /* darkest grey - used for headings */
-  --clr-grey-1: hsl(209, 61%, 16%);
-  --clr-grey-3: hsl(209, 34%, 30%);
-  --clr-grey-4: hsl(209, 28%, 39%);
+  --clr-grey-1: hsl(65, 100%, 50%);
+  --clr-grey-3: hsl(0, 0%, 100%);
+  --clr-grey-4: hsl(82, 20%, 71%);
   /* grey used for paragraphs */
-  --clr-grey-5: hsl(210, 22%, 49%);
-  --clr-grey-8: hsl(210, 31%, 80%);
-  --clr-grey-9: hsl(212, 33%, 89%);
-  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-grey-5: hsl(0, 35%, 91%);
+  --clr-grey-8: hsl(210, 30%, 26%);
+  --clr-grey-9: hsl(210, 4%, 11%);
+  --clr-grey-10: hsl(210, 38%, 5%);
+
   --clr-green-dark: hsl(125, 67%, 35%);
   --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
-  --clr-white: #fff;
+  --clr-white: rgb(24, 13, 13);
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
   --transition: all 0.3s linear;
@@ -230,6 +231,8 @@ Navbar
 }
 .nav-header img {
   margin-bottom: 0.375rem;
+  width: 50%;
+  height: 50%;
 }
 .toggle-btn {
   font-size: 2rem;
@@ -777,14 +780,14 @@ Footer
 */
 .footer {
   height: 9rem;
-  background: #222;
+  background: rgb(19, 19, 19);
   text-align: center;
   display: grid;
   place-items: center;
 }
 .footer h4 {
   margin-top: 0.5rem;
-  color: var(--clr-white);
+  color: var(--clr-grey-5);
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -795,7 +798,7 @@ Footer
   margin: 0 auto 1rem auto;
 }
 .footer .social-link {
-  color: var(--clr-white);
+  color: var(--clr-grey-5);
 }
 .footer .social-link:hover {
   color: var(--clr-primary-5);
