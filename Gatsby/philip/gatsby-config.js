@@ -16,9 +16,9 @@ const strapiConfig = {
 module.exports = {
   siteMetadata: {
     title: `Philip Portfolio`,
-    description: `Awesome Portfolio built with Gatsby and Strapi`,
+    description: `PhilipSan's portfolio 😎 | pls be nice today and remember to drink water :)`,
     titleTemplate: `%s | Philip Portfolio`,
-    url: `https://philipsanm.github.io/`,
+    url: `https://philipsanm.github.io`,
     twitterUsername: `@philipsanm`,
     image: `/main.png`,
   },

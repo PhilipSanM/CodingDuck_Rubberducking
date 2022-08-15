@@ -15,7 +15,7 @@ const About = ({ data }) => {
         <div className="section-center about-center">
           <GatsbyImage
             image={getImage(image.localFile)}
-            className="about-img-svg"
+            className="about-img"
             alt={title}
           />
 

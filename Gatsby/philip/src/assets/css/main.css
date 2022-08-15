@@ -435,6 +435,7 @@ Hero
 }
 .hero-img {
   display: none;
+  margin-top: 2rem;
 }
 .hero-img-svg {
   display: none;
@@ -872,7 +873,8 @@ About Page
 }
 .about-img {
   margin-bottom: 2rem;
-  height: 25rem;
+
+  width: 100%;
 }
 .about-img-svg {
   margin-bottom: 2rem;
