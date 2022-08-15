@@ -4,6 +4,7 @@ import associations from "../constants/services"
 const Associations = () => {
   return (
     <section className="section bg-grey">
+      <div className="line"> </div>
       <Title title="Associations" />
       <div className="section-center services-center">
         {associations.map(associations => {

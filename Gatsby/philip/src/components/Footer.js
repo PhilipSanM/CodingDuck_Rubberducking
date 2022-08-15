@@ -3,6 +3,7 @@ import socialLinks from "../constants/social_links"
 const Footer = () => {
   return (
     <footer className="footer">
+      <div className="footer-line"> </div>
       <div>
         <div className="footer-links social-links">
           {socialLinks.map(link => {

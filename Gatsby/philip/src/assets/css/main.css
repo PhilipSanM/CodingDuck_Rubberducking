@@ -33,7 +33,9 @@ Variables
   --clr-grey-8: hsl(210, 32%, 15%);
   --clr-grey-9: hsl(210, 4%, 11%);
   --clr-grey-10: #232425;
-
+  --clr-services: hsl(0, 58%, 72%);
+  --clr-black: #000000;
+  --cl-splatoonfav: rgb(18, 3, 115) 0;
   --clr-green-dark: hsl(125, 67%, 35%);
   --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
@@ -527,11 +529,17 @@ Services
   transition: var(--transition);
 }
 .service:hover {
-  background: var(--clr-primary-5);
+  background: var(--clr-services);
   color: var(--clr-primary-9);
 }
 .service:hover p {
-  color: var(--clr-primary-9);
+  color: var(--clr-black);
+}
+.service:hover a {
+  color: var(--cl-splatoonfav);
+}
+.service a {
+  color: var(--clr-grey-1);
 }
 .service:hover .underline {
   background: var(--clr-primary-9);
@@ -670,7 +678,7 @@ Projects
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom right, var(--clr-primary-5), #222);
+  background: linear-gradient(to bottom right, var(--clr-primary-9), #222);
   opacity: 0.85;
   transition: var(--transition);
 }
@@ -784,6 +792,14 @@ Footer
   text-align: center;
   display: grid;
   place-items: center;
+}
+.footer-line {
+  width: 40rem;
+  height: 0.15rem;
+  margin-bottom: 1.25rem;
+  background: var(--clr-grey-5);
+  margin-left: auto;
+  margin-right: auto;
 }
 .footer h4 {
   margin-top: 0.5rem;
@@ -963,4 +979,13 @@ Contact Page
   border-bottom-right-radius: var(--radius);
   border-top-right-radius: 0;
   border-top-left-radius: 0;
+}
+
+.line {
+  width: 80rem;
+  height: 0.05rem;
+  margin-bottom: 1.25rem;
+  background: var(--clr-grey-5);
+  margin-left: auto;
+  margin-right: auto;
 }
