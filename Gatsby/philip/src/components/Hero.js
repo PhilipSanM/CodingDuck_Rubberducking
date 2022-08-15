@@ -25,9 +25,12 @@ const Hero = () => {
                 )
               })}
             </div>
-            <Link to="/" className="btn">
+            <a
+              href="https://drive.google.com/file/d/1nlMvLgq9W7wtTSgsA4me1dyT3Jl6ihT0/view?usp=sharing"
+              className="btn"
+            >
               Check my Resume
-            </Link>
+            </a>
           </div>
         </article>
         <StaticImage

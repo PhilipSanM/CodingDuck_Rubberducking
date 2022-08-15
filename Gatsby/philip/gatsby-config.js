@@ -14,6 +14,15 @@ const strapiConfig = {
   singleTypes: [`about`],
 }
 module.exports = {
+  siteMetadata: {
+    title: `Philip Portfolio`,
+    description: `Awesome Portfolio built with Gatsby and Strapi`,
+    titleTemplate: `%s | Philip Portfolio`,
+    url: `https://philipsanm.github.io/`,
+    twitterUsername: `@philipsanm`,
+    image: `/main.png`,
+  },
+
   /* Your site config here */
   plugins: [
     `gatsby-plugin-image`,

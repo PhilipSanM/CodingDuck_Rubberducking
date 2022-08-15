@@ -31,6 +31,13 @@ const associations = [
     text: `Algorithm Club of the Superior School of Computer Science, focused on training students to participate in programming competitions at a national and international level.`,
     link: `https://www.facebook.com/algoritmiaescom`,
   },
+  {
+    id: 5,
+    icon: <SiIbm className="service-icon" />,
+    title: "Quantum Explorer Qiskit",
+    text: `Qiskit [kiss-kit] is an open-source SDK for working with quantum computers at the level of pulses, circuits, and application modules.`,
+    link: `https://qiskit.org/`,
+  },
 ]
 
 export default associations
