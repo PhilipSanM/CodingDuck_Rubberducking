@@ -20,7 +20,7 @@ module.exports = {
     titleTemplate: `%s | Philip Portfolio`,
     url: `https://philipsanm.github.io`,
     twitterUsername: `@philipsanm`,
-    image: `/main.png`,
+    image: `/static/main.png`,
   },
 
   /* Your site config here */

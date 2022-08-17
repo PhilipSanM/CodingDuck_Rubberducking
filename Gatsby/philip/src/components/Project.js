@@ -19,6 +19,8 @@ const Project = ({
         image={getImage(image.localFile)}
         className="project-img"
         alt={title}
+        placeholder="blurred"
+        layout="constrained"
       />
       <div className="project-info">
         <span className="project-number">0{index + 1}.</span>
@@ -33,7 +35,7 @@ const Project = ({
         </div>
 
         <div className="project-links">
-          <a href={url}>
+          <a href={github}>
             <FaGithubSquare className="project-icon"></FaGithubSquare>
           </a>
           <a href={url}>

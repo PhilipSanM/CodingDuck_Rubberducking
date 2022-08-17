@@ -435,7 +435,7 @@ Hero
 }
 .hero-img {
   display: none;
-  margin-top: 2rem;
+  margin-top: 7rem;
 }
 .hero-img-svg {
   display: none;
@@ -671,6 +671,7 @@ Projects
   border-top-right-radius: var(--radius);
   height: 19rem;
   z-index: 1;
+  width: 100%;
 }
 .project-img::after {
   content: "";
@@ -795,7 +796,7 @@ Footer
   place-items: center;
 }
 .footer-line {
-  width: 40rem;
+  width: 20rem;
   height: 0.15rem;
   margin-bottom: 1.25rem;
   background: var(--clr-grey-5);
@@ -984,7 +985,7 @@ Contact Page
 }
 
 .line {
-  width: 80rem;
+  width: 20rem;
   height: 0.05rem;
   margin-bottom: 1.25rem;
   background: var(--clr-grey-5);
