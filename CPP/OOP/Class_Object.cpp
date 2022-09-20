@@ -26,8 +26,8 @@ public:
     double balance {0.0};
 
     //methods
-    bool deposit(double);
-    bool withdraw(double);
+    bool deposit(double bal){balance += bal; cout << "In deposit\n";}
+    bool withdraw(double bal){balance -= bal; cout << "In withdraw" << endl;}
 };
 
 
@@ -70,6 +70,9 @@ int main(){
 
     delete enemy;
 
+    cout << frank_account.balance;
+    frank_account.deposit(500.00);
+    cout << frank_account.balance;
 
 
     return 0;
