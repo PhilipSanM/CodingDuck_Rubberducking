@@ -115,8 +115,8 @@ print(3 * 3 + 3 / 3 - 3)
 # print(round(8/3, 1)) # 2.7
 
 # #Also you can have the doble // for making the interger more faster without the cast
-
-# print(8//3) #2 and is also an int
+print('dsfdsadafsasf')
+print(8//3) #2 and is also an int
 
 # result = 4/2
 # result /=2 # result = result/2
