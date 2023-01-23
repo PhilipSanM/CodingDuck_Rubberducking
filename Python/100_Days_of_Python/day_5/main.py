@@ -112,22 +112,49 @@ nr_numbers = 5
 
 #Eazy Level - Order not randomised:
 #e.g. 4 letter, 2 symbol, 2 number = JduE&!91
-password = ""
-for number in range(1, nr_letters + 1):
-    random_number = random.randint(0,len(letters) )
-    password += letters[random_number]
+# password = ""
+# for number in range(1, nr_letters + 1):
+#     random_number = random.randint(0,len(letters) )
+#     password += letters[random_number]
 
-for number in range(1, nr_symbols + 1):
-    random_number = random.randint(0,len(symbols) )
-    password += symbols[random_number]
+# for number in range(1, nr_symbols + 1):
+#     random_number = random.randint(0,len(symbols) )
+#     password += symbols[random_number]
 
-for number in range(1, nr_numbers + 1):
-    random_number = random.randint(0,len(numbers) )
-    password += numbers[random_number]
+# for number in range(1, nr_numbers + 1):
+#     random_number = random.randint(0,len(numbers) )
+#     password += numbers[random_number]
 
-print(password)
+# print(password)
 
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
 
+password = ""
+for number in range(1, nr_letters + 1):
+    random_number = random.randint(0,len(letters) - 1)
+    password += letters[random_number]
 
+for number in range(1, nr_symbols + 1):
+    random_number = random.randint(0,len(symbols) - 1)
+    password += symbols[random_number]
+
+for number in range(1, nr_numbers + 1):
+    random_number = random.randint(0,len(numbers) - 1)
+    password += numbers[random_number]
+
+# SWAP
+password_list = []
+for character in password:
+    password_list.append(character)
+#Random
+random.shuffle(password_list)
+# print(password_list)
+
+
+hard_password = ""
+for character in password_list:
+    hard_password += character
+  
+
+print(hard_password)
