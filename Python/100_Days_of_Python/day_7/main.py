@@ -70,17 +70,29 @@ for _ in range(len(chosen_word)):
     # display += "_"
 
 win = False
-lives = 6
-while(not win):
+lives_left = 6
+while(not win and lives_left > 0 ):
     print()
     guess = input("Guess a letter: ").lower()
     for index in range(len(chosen_word)):
         letter = chosen_word[index]
         if letter == guess:
             display[index] = letter
+    
+    if guess not in display:
+        lives_left -= 1
+        print(f"Lives left: {lives_left}")
+        print(stages[lives_left])
+        if lives_left == 0:
+            print(" YOU LOSE!")
+    else:
+        print(f"Lives left: {lives_left}")
+        print(stages[lives_left])
 
+        
     # for letter in display:
     #     print(letter," ", end="")
+    
     print(f"{' '.join(display)}")
     # for letter in display:
     #     if letter == "_":
