@@ -1,17 +1,93 @@
-#Step 1 
-
+stages = ['''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''']
+import random
 word_list = ["aardvark", "baboon", "camel"]
-
-#TODO-1 - Randomly choose a word from the word_list and assign it to a variable called chosen_word.
-import random 
-# random_number = random.randint(0,len(word_list)-1)
-# chosen_word = word_list[random_number]
 chosen_word = random.choice(word_list)
-#TODO-2 - Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
-standard_input = 'l'
-guess_letter = input("Can u give me a guess of the word?").lower()
 
-#TODO-3 - Check if the letter the user guessed (guess) is one of the letters in the chosen_word.
-for letter in chosen_word:
-    if guess_letter == letter:
-        print("You guess the letter!")
+#Testing code
+print(f'Pssst, the solution is {chosen_word}.')
+
+#TODO-1: - Create an empty List called display.
+#For each letter in the chosen_word, add a "_" to 'display'.
+#So if the chosen_word was "apple", display should be ["_", "_", "_", "_", "_"] with 5 "_" representing each letter to guess.
+display = []
+for _ in range(len(chosen_word)):
+    display.append("_")
+    # display += "_"
+
+win = False
+lives = 6
+while(not win):
+    print()
+    guess = input("Guess a letter: ").lower()
+    for index in range(len(chosen_word)):
+        letter = chosen_word[index]
+        if letter == guess:
+            display[index] = letter
+
+    # for letter in display:
+    #     print(letter," ", end="")
+    print(f"{' '.join(display)}")
+    # for letter in display:
+    #     if letter == "_":
+    #         win = False
+    #         break
+    #     else:
+    #         win = True
+    if "_" not in display:
+        print(" YOU WON!")
+        win = True
