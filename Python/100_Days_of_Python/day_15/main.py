@@ -62,16 +62,7 @@ def make_cappuccino():
 
 
 def main():
-    while True:
-        order = input("What would you like? (espresso/latte/cappuccino):")
-        if order == 'cappuccino':
-            make_cappuccino()
-        elif order == 'espresso':
-            make_espresso()
-        elif order == 'latte':
-            make_latte()
-        else:
-            report()
+    print(MENU['espresso']['ingredients']['water'])
 
 
 if __name__ == "__main__":
